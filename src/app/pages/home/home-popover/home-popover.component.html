@@ -1,0 +1,17 @@
+<ion-list class="ion-no-margin ion-no-padding">
+  <ion-list-header color="dark">
+    <ion-label >La tua posizione</ion-label>
+  </ion-list-header>
+
+  <ion-item (click)="maps(); close()">
+    <ion-item-sliding #Visualizza_posizione >
+      <ion-label>Visualizza posizione</ion-label>
+    </ion-item-sliding >
+  </ion-item>
+
+  <ion-item (click)="onLocateUser(); close()">
+    <ion-item-sliding #Salva_posizione>
+      <ion-label>Salva posizione</ion-label>
+    </ion-item-sliding >
+  </ion-item>
+</ion-list>

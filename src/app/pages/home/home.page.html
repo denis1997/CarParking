@@ -1,0 +1,49 @@
+<ion-content>
+  <body>
+  <div class="ion-padding-horizontal">
+
+      <div class="ion-padding-horizontal ion-text-center">
+         <div class="logo"></div>
+      </div>
+
+    <ion-searchbar [autocomplete]="" placeholder="Inserire il nome della città" color="light"></ion-searchbar>
+    <div id="button">
+      <div id="posizione">
+        <ion-item expand="block" fill="clear" (click)="notifications()">
+            <ion-icon name="pin" color="dark" slot="start" ></ion-icon>
+            <ion-label color="dark">La tua posizione</ion-label>
+        </ion-item>
+      </div>
+      <div id="mappa">
+        <ion-item expand="block" fill="clear" >
+            <ion-icon name="map" color="dark" slot="start"></ion-icon>
+            <ion-label color="dark" >Visualizza la mappa</ion-label>
+        </ion-item>
+      </div>
+      <div id="ricerche">
+        <ion-item expand="block" fill="clear" >
+            <ion-icon name="list" color="dark" slot="start"></ion-icon>
+            <ion-label color="dark">Ultime ricerche</ion-label>
+        </ion-item>
+      </div>
+    </div>
+
+   <ion-tab-bar slot="bottom" >
+       <ion-tab-button tab="Il mio account">
+           <ion-icon name="contact" color="dark"></ion-icon>
+           {{'MYACCOUNT_TAB' | translate }}
+        </ion-tab-button>
+
+       <ion-tab-button tab="Preferiti">
+           <ion-icon name="heart" color="dark"></ion-icon>
+           {{'PREFERITI_TAB' | translate}}
+       </ion-tab-button>
+
+       <ion-tab-button tab="Impostazioni">
+           <ion-icon name="settings"color="dark"></ion-icon>
+          {{'IMPOSTAZIONI_TAB' | translate}}
+       </ion-tab-button>
+   </ion-tab-bar>
+  </div>
+  </body>
+</ion-content>
