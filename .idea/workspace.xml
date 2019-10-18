@@ -38,7 +38,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
-    <property name="ts.external.directory.path" value="C:\Users\S530FNEJ084T\Documents\GitHub\CarParking\node_modules\typescript\lib" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2019.2.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -125,6 +125,7 @@
       <workItem from="1571433138082" duration="108000" />
       <workItem from="1571434001914" duration="131000" />
       <workItem from="1571434169460" duration="55000" />
+      <workItem from="1571434559485" duration="129000" />
     </task>
     <servers />
   </component>

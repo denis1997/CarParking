@@ -33,7 +33,7 @@ export class HomePopoverComponent implements OnInit {
       message: 'La tua posizione è stata salvata.',
       duration: 800,
       position: 'middle',
-      color: 'dark',
+      color: 'secondary',
     });
     toast.present();
   }
