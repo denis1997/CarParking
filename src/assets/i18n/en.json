@@ -17,14 +17,14 @@
   "USERNAME_REQUIRED": "Username required",
   "PASSWORD_REQUIRED": "Password required",
 
-  "PIANO_STUDI_MENU": "Piano di Studi",
-  "TASSE_MENU": "Taxes",
-  "LIBRETTO_MENU": "Libretto",
-  "MIE_NOTIZIE_MENU": "My News",
+  "MAPS": "Maps",
+  "SETTINGS" : "Settings",
+  "LA_TUA_POSIZIONE" : "Your position",
+  "VISUALIZZA_MAPPA" : "View map",
+  "ULTIME_RICERCHE" : "Latest research",
+  "VISUALIZZA_POSIZIONE" : "View position",
+  "SALVA_POSIZIONE" : "Save position",
 
-  "APPROVAZIONE_PIANI_MENU": "Plan approvement",
-  "DIARIO_MENU": "Agenda",
-  "QUESTIONARIO_MENU": "Questionnaire",
 
   "PROFILO_MENU": "Profile",
   "LOGOUT_MENU": "Logout",

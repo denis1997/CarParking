@@ -20,14 +20,15 @@
   "USERNAME_REQUIRED": "Username obbligatorio",
   "PASSWORD_REQUIRED": "Password obbligatorio",
 
-  "PIANO_STUDI_MENU": "Piano di Studi",
-  "TASSE_MENU": "Tasse",
-  "LIBRETTO_MENU": "Libretto",
-  "MIE_NOTIZIE_MENU": "Mie Notizie",
+  "MAPS": "Mappe",
+  "SETTINGS": "Impostazioni",
 
-  "APPROVAZIONE_PIANI_MENU": "Approvazione piani",
-  "DIARIO_MENU": "Diario",
-  "QUESTIONARIO_MENU": "Questionari",
+  "LA_TUA_POSIZIONE" : "La tua posizione",
+  "VISUALIZZA_MAPPA" : "Visualizza la mappa",
+  "ULTIME_RICERCHE" : "Ultime ricerche",
+  "VISUALIZZA_POSIZIONE" : "Visualizza posizione",
+  "SALVA_POSIZIONE" : "Salva posizione",
+
 
   "PROFILO_MENU": "Profilo",
   "LOGOUT_MENU": "Esci",

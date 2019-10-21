@@ -11,19 +11,19 @@
       <div id="posizione">
         <ion-item expand="block" fill="clear" (click)="notifications()">
             <ion-icon name="pin" color="dark" slot="start" ></ion-icon>
-            <ion-label color="dark">La tua posizione</ion-label>
+            <ion-label color="dark">{{"LA_TUA_POSIZIONE" | translate}}</ion-label>
         </ion-item>
       </div>
       <div id="mappa">
         <ion-item expand="block" fill="clear" >
             <ion-icon name="map" color="dark" slot="start"></ion-icon>
-            <ion-label color="dark" >Visualizza la mappa</ion-label>
+            <ion-label color="dark" >{{"VISUALIZZA_MAPPA" | translate}}</ion-label>
         </ion-item>
       </div>
       <div id="ricerche">
         <ion-item expand="block" fill="clear" >
             <ion-icon name="list" color="dark" slot="start"></ion-icon>
-            <ion-label color="dark">Ultime ricerche</ion-label>
+            <ion-label color="dark">{{"ULTIME_RICERCHE" | translate}}</ion-label>
         </ion-item>
       </div>
     </div>
@@ -39,7 +39,7 @@
            {{'PREFERITI_TAB' | translate}}
        </ion-tab-button>
 
-       <ion-tab-button tab="Impostazioni">
+       <ion-tab-button tab="Impostazioni" (click)="settings()">
            <ion-icon name="settings"color="dark"></ion-icon>
           {{'IMPOSTAZIONI_TAB' | translate}}
        </ion-tab-button>

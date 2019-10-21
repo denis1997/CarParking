@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { PopoverController} from '@ionic/angular';
+import {NavController, PopoverController} from '@ionic/angular';
 import {Lingua} from '../../services/lingua.service';
 import {HomePopoverComponent} from './home-popover/home-popover.component';
 
@@ -15,7 +15,8 @@ export class HomePage {
   private lingue: Lingua[];
 
 
-  constructor(public popoverController: PopoverController) {}
+  constructor(public popoverController: PopoverController,
+              private navController: NavController) {}
 
   async notifications() {
     const popover = await this.popoverController.create({
@@ -27,6 +28,8 @@ export class HomePage {
     return await popover.present();
   }
 
+    settings() {
+      this.navController.navigateForward('settings');    }
 }
 
 

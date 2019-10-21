@@ -2,8 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5e864a13-5a35-4631-b036-28a0fb401869" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/app/pages/settings/settings.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/pages/settings/settings.page.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/pages/settings/settings.page.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/pages/settings/settings.page.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/pages/settings/settings.page.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/home/home-popover/home-popover.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/home/home-popover/home-popover.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/home/home-popover/home-popover.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/home/home-popover/home-popover.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/home/home.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/home/home.page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/home/home.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/home/home.page.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/maps/maps.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/maps/maps.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/maps/maps.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/maps/maps.page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/i18n/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/i18n/en.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/i18n/it.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/i18n/it.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,7 +45,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="excluded.www.directory" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/Esami 2018-2019/Applicazioni dispositivi mobili/MyUnivaq" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
@@ -41,15 +54,15 @@
     <property name="ts.external.directory.path" value="C:\Users\S530FNEJ084T\Documents\GitHub\CarParking\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\S530FNEJ084T\CarParking\src\assets" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\S530FNEJ084T\Documents\GitHub\CarParking\src\app\pages" />
       <recent name="C:\Users\S530FNEJ084T\Desktop\CarParkingWithMaps\src\app\pages\home" />
       <recent name="C:\Users\S530FNEJ084T\CarParking\src\app\pages" />
       <recent name="C:\Users\S530FNEJ084T\CarParking\src\app" />
       <recent name="C:\Users\S530FNEJ084T\CarParking\src\app\pages\home" />
-      <recent name="C:\Users\S530FNEJ084T\CarParking\node_modules" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\S530FNEJ084T\CarParking\src\assets" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -127,6 +140,8 @@
       <workItem from="1571434169460" duration="55000" />
       <workItem from="1571434559485" duration="129000" />
       <workItem from="1571434842473" duration="23000" />
+      <workItem from="1571585698275" duration="3731000" />
+      <workItem from="1571644030384" duration="2448000" />
     </task>
     <servers />
   </component>

@@ -15,6 +15,7 @@ import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import {PlacesService} from './services/places.service';
+import {FormsModule} from '@angular/forms';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -25,6 +26,7 @@ export function createTranslateLoader(http: HttpClient) {
   entryComponents: [],
   imports: [BrowserModule,
     HttpClientModule,
+      FormsModule,
     IonicModule.forRoot(),
     IonicStorageModule.forRoot(),
     TranslateModule.forRoot({

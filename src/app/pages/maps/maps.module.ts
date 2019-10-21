@@ -8,6 +8,7 @@ import { AgmCoreModule } from '@agm/core';
 import { IonicModule } from '@ionic/angular';
 
 import { MapsPage } from './maps.page';
+import {TranslateModule} from '@ngx-translate/core';
 
 const routes: Routes = [
   {
@@ -17,15 +18,16 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [
-    CommonModule,
-    FormsModule,
-    IonicModule,
-    RouterModule.forChild(routes),
-    AgmCoreModule.forRoot({
-      apiKey: ''
-    })
-  ],
+    imports: [
+        CommonModule,
+        FormsModule,
+        IonicModule,
+        RouterModule.forChild(routes),
+        AgmCoreModule.forRoot({
+            apiKey: ''
+        }),
+        TranslateModule
+    ],
   declarations: [MapsPage]
 })
 export class MapsPageModule {}
