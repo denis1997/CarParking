@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Map, tileLayer, marker } from 'leaflet';
+import { Map, latLng, tileLayer, layer, marker} from 'leaflet';
 
 @Component({
   selector: 'app-maps',
@@ -15,13 +15,11 @@ export class MapsPage {
 
   leafletMap() {
     this.map = new Map('mapId2').setView([42.5764200, 13.9889900], 13);
-
-    tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
+    tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(this.map);
-    const markPoint = marker([42.5764200, 13.9889900]);
-    markPoint.bindPopup('<p>ATRI</p>');
-    this.map.addLayer(markPoint);
-  }
+    const marks = marker([42.5764200, 13.9889900]).addTo(this.map);
+    }
 
   ionViewWillLeave() {
     this.map.remove();

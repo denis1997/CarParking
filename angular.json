@@ -117,6 +117,15 @@
                 "glob": "**/*",
                 "input": "./node_modules/leaflet/dist/images",
                 "output": "leaflet/"
+              },
+              "src/favicon.ico",
+              "src/assets",
+              "src/assets/icon/marker-icon.png",
+              "src/assets/icon/marker-shadow.png",
+              {
+                "glob": "**/*",
+                "input": "node_modules/leaflet/dist/images/",
+                "output": "./assets/"
               }
             ]
           },

@@ -3,7 +3,7 @@ import { IonicModule } from '@ionic/angular';
 
 import { MapsPage } from './maps.page';
 
-describe('Tab2Page', () => {
+describe('MapsPage', () => {
   let component: MapsPage;
   let fixture: ComponentFixture<MapsPage>;
 

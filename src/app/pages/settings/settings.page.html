@@ -15,7 +15,7 @@
       <ion-select-option *ngFor="let lingua of lingue" [value]="lingua.valore">{{lingua.etichetta}}</ion-select-option>
     </ion-select>
   </ion-item>
-    <div margin-top="30px" align="center">
+    <div class="ion-margin-top" align="center">
       <ion-button icon-left size="medium" shape="round" color="primary" (click)="onSubmit()" [disabled]="!profiloFormModel.valid" tappable>
         {{ 'SAVE_BUTTON' | translate }}
       </ion-button>
