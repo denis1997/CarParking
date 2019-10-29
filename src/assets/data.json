@@ -1,0 +1,28 @@
+{
+  "properties" : [
+    {
+      "city": "Bar Atri",
+      "state": "IT",
+      "long": 42.5764210,
+      "lat": 13.98899015
+    },
+    {
+      "city": "Parcheggio Atri",
+      "state": "MA",
+      "long": 42.577655,
+      "lat": 13.988621
+    },
+    {
+      "city": "Denis Suca",
+      "state": "IT",
+      "long": 42.5764850,
+      "lat": 13.98899015
+    },
+    {
+      "city": "Belvedere",
+      "state": "MA",
+      "long": 42.577780,
+      "lat": 13.988621
+    }
+  ]
+}
