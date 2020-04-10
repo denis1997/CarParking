@@ -16,6 +16,7 @@ import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import {PlacesService} from './services/places.service';
 import {FormsModule} from '@angular/forms';
+import {httpInterceptorProviders} from './interceptors';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -36,6 +37,10 @@ export function createTranslateLoader(http: HttpClient) {
          deps: [HttpClient]
        }
     }),
+    IonicStorageModule.forRoot({
+      name: 'carparking__db',
+      driverOrder: ['indexeddb', 'sqlite', 'websql']
+    }),
     AppRoutingModule,
     ],
   providers: [
@@ -43,7 +48,8 @@ export function createTranslateLoader(http: HttpClient) {
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
       PlacesService,
-      Storage
+      Storage,
+    httpInterceptorProviders
   ],
   bootstrap: [AppComponent]
 })

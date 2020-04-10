@@ -3,6 +3,7 @@ import {Lingua, LinguaService} from '../../services/lingua.service';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {TranslateService} from '@ngx-translate/core';
 import {NavController} from '@ionic/angular';
+import {UtenteService} from '../../services/utente.service';
 
 @Component({
   selector: 'app-settings',
@@ -18,6 +19,7 @@ export class SettingsPage implements OnInit {
   constructor(private formBuilder: FormBuilder,
               private navController: NavController,
               private translateService: TranslateService,
+              private utenteService: UtenteService,
               private linguaService: LinguaService) {
   }
 
@@ -33,6 +35,11 @@ export class SettingsPage implements OnInit {
     this.linguaService.getLinguaAttuale().subscribe((lingua) => {
       this.profiloFormModel.patchValue({linguaPreferita: lingua});
     });
+  }
+
+  logout() {
+    this.utenteService.logout();
+    this.navController.navigateRoot('login');
   }
 
   onSubmit(): void {

@@ -28,8 +28,11 @@ export class HomePage {
     return await popover.present();
   }
 
-    settings() {
-      this.navController.navigateForward('settings');    }
+    myaccount() {
+      this.navController.navigateForward('profilo');    }
+
+  settings() {
+    this.navController.navigateForward('settings');    }
 }
 
 

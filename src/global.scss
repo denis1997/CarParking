@@ -25,6 +25,10 @@
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
 
+.avatar{
+  margin: auto;
+}
+
 .logo {
   width: 100px;
   height: 170px;
@@ -58,3 +62,4 @@ ion-item {
   background: #f3f3f3;
   opacity: 0.6;
 }
+
