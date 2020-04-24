@@ -17,14 +17,13 @@ export class HomePopoverComponent implements OnInit {
 
   onLocateUser() {
     Geolocation.getCurrentPosition()
-        .then(
-            (location) => {
-              this.presentToast();
-            }
-        )
-        .catch(
-            (error) => console.log('An error occurred')
-        );
+        .then((resp) => {
+             const lat = resp.coords.latitude;
+             const lng = resp.coords.longitude;
+             this.presentToast();
+        }).catch((error) => {
+        console.log('Error getting location', error);
+    });
   }
 
 

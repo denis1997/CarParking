@@ -12,6 +12,10 @@
   <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
           integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
           crossorigin=""></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol@[VERSION]/dist/L.Control.Locate.min.css" />
+
+  <script src="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol@[VERSION]/dist/L.Control.Locate.min.js" charset="utf-8"></script>
 
   <style>
     html, body, .map {
@@ -24,12 +28,19 @@
 
   <link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/3.11/themes/css/cartodb.css" />
 </head>
+  <ion-content>
+    <ion-item style="cursor: pointer" (click)="locatePosition()">
+      <ion-button fill="clear">
+        <ion-icon slot="start" name="map"></ion-icon>
+        Locate Position
+      </ion-button>
+    </ion-item>
+  </ion-content>
 <body>
 
   <!-- include cartodb.js library -->
   <script src="http://libs.cartocdn.com/cartodb.js/v3/3.11/cartodb.js"></script>
   <script>
-
 
     import * as L from 'leaflet';
 
@@ -47,7 +58,7 @@
       var map_openstreet = L.map('map_openstreet', options);
       L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
         attribution: 'OpenStreet'
-      }).addTo(map_openstreet);
+      }).addTo(this.map());
     }
 
     var popup = L.popup();

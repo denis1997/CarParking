@@ -26,23 +26,23 @@ export function createTranslateLoader(http: HttpClient) {
   declarations: [AppComponent],
   entryComponents: [],
   imports: [BrowserModule,
-    HttpClientModule,
-      FormsModule,
-    IonicModule.forRoot(),
-    IonicStorageModule.forRoot(),
-    TranslateModule.forRoot({
-       loader: {
-         provide: TranslateLoader,
-         useFactory: (createTranslateLoader),
-         deps: [HttpClient]
-       }
-    }),
-    IonicStorageModule.forRoot({
-      name: 'carparking__db',
-      driverOrder: ['indexeddb', 'sqlite', 'websql']
-    }),
-    AppRoutingModule,
-    ],
+            HttpClientModule,
+            FormsModule,
+            IonicModule.forRoot(),
+            IonicStorageModule.forRoot(),
+            TranslateModule.forRoot({
+               loader: {
+                 provide: TranslateLoader,
+                 useFactory: (createTranslateLoader),
+                 deps: [HttpClient]
+               }
+            }),
+            IonicStorageModule.forRoot({
+              name: 'carparking__db',
+              driverOrder: ['indexeddb', 'sqlite', 'websql']
+            }),
+            AppRoutingModule,
+  ],
   providers: [
     StatusBar,
     SplashScreen,
