@@ -1,21 +1,31 @@
 {
   "BACK_BUTTON_TEXT": "Back",
 
-  "LOGIN_BUTTON": "Enter",
+  "LOGIN_BUTTON": "Login",
   "DONE_BUTTON": "Done",
   "SAVE_BUTTON": "Save",
-   "DELETE_BUTTON": "Delete",
+  "DELETE_BUTTON": "Delete",
+  "REGISTRATION_BUTTON": "Sign in",
+
 
   "LOGIN_TITLE": "Login",
   "LOGIN_ERROR_TITLE": "Login error",
   "LOGIN_ERROR_SUB_TITLE": "Username and/or password Wrong!",
+  "REGISTRAZIONE_TITOLO": "Registration",
+  "DETTAGLIO_PARCHEGGIO_TITOLO": "Parking Detail",
+
 
   "PAGINA_COSTRUZIONE": "Page under construction!!!!!",
 
   "USERNAME": "Username",
   "PASSWORD": "Password",
+  "NOME": "Name",
+  "COGNOME": "Surname",
+  "EMAIL": "Email",
   "USERNAME_REQUIRED": "Username required",
   "PASSWORD_REQUIRED": "Password required",
+  "NAME_REQUIRED": "Name required",
+  "SURNAME_REQUIRED": "Surname required",
 
   "MAPS": "Maps",
   "SETTINGS" : "Settings",

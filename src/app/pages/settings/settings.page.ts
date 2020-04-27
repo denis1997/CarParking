@@ -39,7 +39,7 @@ export class SettingsPage implements OnInit {
 
   logout() {
     this.utenteService.logout();
-    this.navController.navigateRoot('login');
+    this.navController.navigateRoot('home');
   }
 
   onSubmit(): void {

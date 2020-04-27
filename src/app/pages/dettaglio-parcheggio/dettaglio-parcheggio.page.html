@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-back-button slot="start" icon="arrow-dropleft"></ion-back-button>
+    <ion-title text-center>{{'DETTAGLIO_PARCHEGGIO_TITOLO' | translate}}</ion-title>
+    <ion-button slot="end" (click)="logout()">{{'LOGOUT_MENU' | translate}}</ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding *ngIf="(parcheggio$ | async) as parcheggio">
+  <ion-item-divider color="tertiary">
+    <ion-text color="dark">
+      <h1>{{parcheggio.nome}}</h1>
+    </ion-text>
+    <ion-icon slot="end" name="image"></ion-icon>
+  </ion-item-divider>
+
+    <ion-item-divider color="medium">
+    <ion-label color="dark">DESCRIZIONE</ion-label>
+    </ion-item-divider>
+      <ion-item>{{parcheggio.descrizione}}</ion-item>
+
+  <ion-item-divider color="medium">
+    <ion-label color="dark">COSTO</ion-label>
+  </ion-item-divider>
+  <ion-item>{{parcheggio.costo}}</ion-item>
+
+  <ion-item-divider color="medium">
+    <ion-label color="dark">ORARIO</ion-label>
+  </ion-item-divider>
+  <ion-item>{{parcheggio.orario}}</ion-item>
+
+
+
+
+</ion-content>

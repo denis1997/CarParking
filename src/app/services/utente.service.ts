@@ -13,6 +13,14 @@ export interface Account {
 
 }
 
+export interface NuovoUtente {
+    nome: string;
+    cognome: string;
+    email: string;
+    username: string;
+    password: string;
+}
+
 @Injectable({
     providedIn: 'root'
 })
@@ -54,7 +62,7 @@ export class UtenteService {
 
     logout() {
         this.authToken = null;
-        this.loggedIn$.next(true);
+        this.loggedIn$.next(false);
         this.storage.remove(AUTH_TOKEN);
         this.storage.remove(UTENTE_STORAGE);
 
@@ -85,6 +93,11 @@ export class UtenteService {
                 this.utente$.next(resp.body);
                 return resp.body;
             }));
+    }
+
+    nuovoUtente(nuovoUtente: NuovoUtente) {
+        return this.http.post(URL.NUOVO_UTENTE,
+            nuovoUtente);
     }
 
 }

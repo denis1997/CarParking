@@ -26,10 +26,10 @@ export class LoginPage implements OnInit {
 
   ngOnInit() {
     this.loginFormModel = this.formBuilder.group({
-      username: ['dendip', Validators.compose([
+      username: ['', Validators.compose([
         Validators.required
       ])],
-      password: ['password', Validators.compose([
+      password: ['', Validators.compose([
         Validators.required
       ])]
     });
@@ -70,4 +70,11 @@ export class LoginPage implements OnInit {
     });
   }
 
+  registration() {
+    this.navController.navigateForward('registrazione');
+  }
+
+  back(){
+    this.navController.navigateBack('home');
+  }
 }

@@ -35,6 +35,14 @@ export class ProfiloPage implements OnInit {
 
   logout() {
     this.utenteService.logout();
-    this.navController.navigateRoot('login');
+    this.navController.navigateRoot('home');
+  }
+
+  onSubmit(): void {
+    this.utente.email = this.profiloFormModel.value.email;
+    this.utente.telefono = this.profiloFormModel.value.telefono;
+    this.utenteService.updateProfilo(this.utente).subscribe((nuovoUtente: Utente) => {
+      this.navController.back();
+    });
   }
 }

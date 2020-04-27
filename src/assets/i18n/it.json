@@ -7,18 +7,27 @@
   "CANCEL_BUTTON": "Annulla",
   "DELETE_BUTTON": "Elimina",
   "UPDATE_BUTTON": "Modifica",
+  "REGISTRATION_BUTTON" : "Registrati",
 
   "LOGIN_TITLE": "Login",
   "LOGIN_ERROR_TITLE": "Errore Login",
   "LOGIN_ERROR_SUB_TITLE": "Username e/o password errate!",
+  "REGISTRAZIONE_TITOLO": "Registrazione",
+  "DETTAGLIO_PARCHEGGIO_TITOLO": "Dettaglio Parcheggio",
+
 
   "PAGINA_COSTRUZIONE": "Pagina in costruzione!!!!!",
 
   "USERNAME": "Username",
   "PASSWORD": "Password",
-  "TELEFONO": "Telefono",
+  "NOME": "Nome",
+  "COGNOME": "Cognome",
+  "EMAIL": "Email",
   "USERNAME_REQUIRED": "Username obbligatorio",
-  "PASSWORD_REQUIRED": "Password obbligatorio",
+  "PASSWORD_REQUIRED": "Password obbligatoria",
+  "NAME_REQUIRED": "Nome obbligatorio",
+  "SURNAME_REQUIRED": "Cognome obbligatorio",
+
 
   "MAPS": "Mappe",
   "SETTINGS": "Impostazioni",

@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import {NavController, PopoverController} from '@ionic/angular';
 import {Lingua} from '../../services/lingua.service';
 import {HomePopoverComponent} from './home-popover/home-popover.component';
+import {Observable} from 'rxjs';
 
 
 
@@ -13,6 +14,7 @@ import {HomePopoverComponent} from './home-popover/home-popover.component';
 export class HomePage {
 
   private lingue: Lingua[];
+
 
 
   constructor(public popoverController: PopoverController,
@@ -33,6 +35,14 @@ export class HomePage {
 
   settings() {
     this.navController.navigateForward('settings');    }
+
+    listaparcheggi() {
+    this.navController.navigateForward('lista-parcheggi');  }
+
+    maps() {
+    this.navController.navigateForward('maps');
+    }
+
 }
 
 

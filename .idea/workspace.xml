@@ -2,36 +2,117 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5e864a13-5a35-4631-b036-28a0fb401869" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/proxy.conf.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/guard/authguard.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/interceptors/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/interceptors/token.interceptor.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/model/utente.model.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/pages/login/login.module.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/pages/login/login.page.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/pages/login/login.page.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/pages/login/login.page.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/pages/login/login.page.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/pages/profilo/profilo.module.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/pages/profilo/profilo.page.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/pages/profilo/profilo.page.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/pages/profilo/profilo.page.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/pages/profilo/profilo.page.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/services/utente.service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/avatar.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/CarParking.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CarParking.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/model/parcheggio.model.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/pages/lista-parcheggi/lista-parcheggi.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/pages/lista-parcheggi/lista-parcheggi.page.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/pages/lista-parcheggi/lista-parcheggi.page.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/pages/lista-parcheggi/lista-parcheggi.page.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/pages/lista-parcheggi/lista-parcheggi.page.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/pages/registrazione/registrazione.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/pages/registrazione/registrazione.page.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/pages/registrazione/registrazione.page.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/pages/registrazione/registrazione.page.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/pages/registrazione/registrazione.page.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/services/parcheggio.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/angular.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-geolocation/CONTRIBUTING.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-geolocation/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-geolocation/NOTICE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-geolocation/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-geolocation/RELEASENOTES.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-geolocation/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-geolocation/plugin.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-geolocation/src/android/Geolocation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-geolocation/src/ios/CDVLocation.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-geolocation/src/ios/CDVLocation.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-geolocation/src/windows/GeolocationProxy.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-geolocation/tests/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-geolocation/tests/plugin.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-geolocation/tests/tests.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-geolocation/www/Coordinates.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-geolocation/www/Position.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-geolocation/www/PositionError.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-geolocation/www/android/geolocation.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-plugin-geolocation/www/geolocation.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/.travis.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/AUTHORS.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/CHANGES.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/CONTRIBUTING.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/HISTORY.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/LICENSE.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/SQLitePlugin.coffee.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/bin/test.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/bin/test.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/circle.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/plugin.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/scripts/beforePluginInstall.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/scripts/prepareSpec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/spec/config.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/spec/www/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/spec/www/lib/jasmine-2.5.2/boot.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/spec/www/lib/jasmine-2.5.2/console.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/spec/www/lib/jasmine-2.5.2/jasmine-html.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/spec/www/lib/jasmine-2.5.2/jasmine.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/spec/www/lib/jasmine-2.5.2/jasmine.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/spec/www/lib/jasmine-2.5.2/jasmine_favicon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/spec/www/spec/basic-db-tx-sql-storage-results.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/spec/www/spec/browser-check-startup.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/spec/www/spec/db-open-close-delete-test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/spec/www/spec/db-simultaneous-tx-access-test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/spec/www/spec/db-sql-operations-test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/spec/www/spec/db-tx-error-handling-test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/spec/www/spec/db-tx-error-mapping-test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/spec/www/spec/db-tx-multiple-update-test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/spec/www/spec/db-tx-sql-features-test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/spec/www/spec/db-tx-sql-select-value-test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/spec/www/spec/db-tx-string-test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/spec/www/spec/db-tx-value-bindings-test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/spec/www/spec/ext-tx-blob-test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/spec/www/spec/regexp-test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/spec/www/spec/self-test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/spec/www/spec/sql-batch-test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/spec/www/spec/sqlite-version-test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/spec/www/spec/tx-semantics-test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/src/android/io/sqlc/SQLiteAndroidDatabase.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/src/android/io/sqlc/SQLiteConnectorDatabase.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/src/android/io/sqlc/SQLitePlugin.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/src/ios/PSPDFThreadSafeMutableDictionary.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/src/ios/PSPDFThreadSafeMutableDictionary.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/src/ios/SQLitePlugin.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/src/ios/SQLitePlugin.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/src/windows/SQLite3-WinRT-sync/SQLite3/Constants.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/src/windows/SQLite3-WinRT-sync/SQLite3/Constants.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/src/windows/SQLite3-WinRT-sync/SQLite3/Database.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/src/windows/SQLite3-WinRT-sync/SQLite3/Database.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/src/windows/SQLite3-WinRT-sync/SQLite3/SQLite3.Shared.vcxitems" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/src/windows/SQLite3-WinRT-sync/SQLite3/SQLite3.UWP.vcxproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/src/windows/SQLite3-WinRT-sync/SQLite3/SQLite3.sln" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/src/windows/SQLite3-WinRT-sync/SQLite3/Statement.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/src/windows/SQLite3-WinRT-sync/SQLite3/Statement.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/src/windows/SQLite3-WinRT-sync/SQLite3/pch.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/src/windows/SQLite3-WinRT-sync/SQLite3/pch.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/src/windows/SQLite3-WinRT-sync/SQLite3JS/js/SQLite3.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/src/windows/sqlite-proxy.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/tests/plugin.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/tests/tests.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/www/SQLitePlugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/fetch.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/constants.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/constants.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/pages/home/home.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/home/home.page.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/pages/home/home.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/home/home.page.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/settings/settings.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/settings/settings.page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/login/login.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/login/login.page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/login/login.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/login/login.page.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/profilo/profilo.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/profilo/profilo.page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/profilo/profilo.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/profilo/profilo.page.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/pages/settings/settings.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/settings/settings.page.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/services/utente.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/services/utente.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/i18n/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/i18n/en.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/i18n/it.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/i18n/it.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/global.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/global.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/theme/variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/theme/variables.scss" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -62,12 +143,12 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="excluded.www.directory" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/Progetto professore definitivo/MyUnivaq" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="preferences.editor" />
     <property name="ts.external.directory.path" value="C:\Users\S530FNEJ084T\Documents\GitHub\CarParking\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
@@ -176,7 +257,20 @@
       <workItem from="1586363923151" duration="1072000" />
       <workItem from="1586428632185" duration="4260000" />
       <workItem from="1586532515079" duration="13083000" />
-      <workItem from="1586556917447" duration="1012000" />
+      <workItem from="1586556917447" duration="1013000" />
+      <workItem from="1586620996346" duration="6000" />
+      <workItem from="1586699253037" duration="651000" />
+      <workItem from="1586970058804" duration="2493000" />
+      <workItem from="1587071847269" duration="5075000" />
+      <workItem from="1587245742033" duration="2954000" />
+      <workItem from="1587311874768" duration="1210000" />
+      <workItem from="1587384282583" duration="183000" />
+      <workItem from="1587507409327" duration="1944000" />
+      <workItem from="1587682060603" duration="590000" />
+      <workItem from="1587735547276" duration="9928000" />
+      <workItem from="1587849472586" duration="3329000" />
+      <workItem from="1587912308937" duration="15733000" />
+      <workItem from="1587994796771" duration="226000" />
     </task>
     <servers />
   </component>

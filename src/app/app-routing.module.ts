@@ -8,7 +8,12 @@ const routes: Routes = [
   { path: 'maps', loadChildren: './pages/maps/maps.module#MapsPageModule' },
   { path: 'settings', loadChildren: './pages/settings/settings.module#SettingsPageModule', canActivateChild: [AuthGuard]  },
   { path: 'login', loadChildren: './pages/login/login.module#LoginPageModule' },
+  { path: 'registrazione', loadChildren: './pages/registrazione/registrazione.module#RegistrazionePageModule' },
   { path: 'profilo', loadChildren: './pages/profilo/profilo.module#ProfiloPageModule', canActivateChild: [AuthGuard]  },
+  { path: 'lista-parcheggi', loadChildren: './pages/lista-parcheggi/lista-parcheggi.module#ListaParcheggiPageModule', canActivateChild: [AuthGuard] },
+  { path: 'dettaglio-parcheggio/:id', loadChildren: './pages/dettaglio-parcheggio/dettaglio-parcheggio.module#DettaglioParcheggioPageModule' },
+
+
 
 
 ];
