@@ -4,5 +4,7 @@ export class Parcheggio {
     descrizione: string;
     costo: string;
     orario: string;
+    rating: number;
+    provincia: string;
 
 }

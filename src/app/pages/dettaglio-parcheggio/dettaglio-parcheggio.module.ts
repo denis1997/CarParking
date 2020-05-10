@@ -7,6 +7,9 @@ import { IonicModule } from '@ionic/angular';
 
 import { DettaglioParcheggioPage } from './dettaglio-parcheggio.page';
 import {TranslateModule} from '@ngx-translate/core';
+import {IonicRatingModule} from 'ionic4-rating/dist';
+import {StarRatingModule} from 'ionic4-star-rating';
+import {CreaRecensionePageModule} from '../crea-recensione/crea-recensione.module';
 
 const routes: Routes = [
   {
@@ -20,9 +23,12 @@ const routes: Routes = [
         CommonModule,
         FormsModule,
         IonicModule,
+        IonicRatingModule,
         RouterModule.forChild(routes),
         TranslateModule,
-        ReactiveFormsModule
+        CreaRecensionePageModule,
+        ReactiveFormsModule,
+        StarRatingModule
     ],
   declarations: [DettaglioParcheggioPage]
 })

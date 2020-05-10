@@ -6,6 +6,7 @@ import {AUTH_TOKEN, URL, UTENTE_STORAGE, X_AUTH} from '../constants';
 import {Utente} from '../model/utente.model';
 import {BehaviorSubject, Observable} from 'rxjs';
 import {map} from 'rxjs/operators';
+import {Recensione} from '../model/recensione.model';
 
 export interface Account {
     username: string;
@@ -98,6 +99,21 @@ export class UtenteService {
     nuovoUtente(nuovoUtente: NuovoUtente) {
         return this.http.post(URL.NUOVO_UTENTE,
             nuovoUtente);
+    }
+
+
+    listRecensioni(): Observable<Recensione[]> {
+        const recensioniUrl = `${URL.UTENTE}/recensioni`;
+        return this.http.get<Recensione[]>(recensioniUrl);
+    }
+
+    deleteRecensione(recensione: Recensione) {
+        const deleteUrl = `${URL.RECENSIONI}/${recensione.id}`;
+        return this.http.delete<Recensione>(deleteUrl);
+    }
+
+    updateRecensione(recensione: Recensione) {
+        return this.http.put<Recensione>(URL.RECENSIONI, recensione);
     }
 
 }

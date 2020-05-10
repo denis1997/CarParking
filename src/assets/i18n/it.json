@@ -14,6 +14,15 @@
   "LOGIN_ERROR_SUB_TITLE": "Username e/o password errate!",
   "REGISTRAZIONE_TITOLO": "Registrazione",
   "DETTAGLIO_PARCHEGGIO_TITOLO": "Dettaglio Parcheggio",
+  "CREA_RECENSIONE_TITLE": "Crea Recensione",
+  "RECENSIONE_NOME": "Titolo",
+  "RECENSIONE_NOME_REQUIRED": "Titolo obbligatorio",
+  "RECENSIONE_DESCRIZIONE": "Descrizione",
+  "RECENSIONE_DESCRIZIONE_REQUIRED": "Descrizione obbligatoria",
+  "VALUTAZIONE_RECENSIONE": "Valutazione",
+
+
+
 
 
   "PAGINA_COSTRUZIONE": "Pagina in costruzione!!!!!",
@@ -65,6 +74,6 @@
   "APPELLO_DATA_REQUIRED": "Data obbligatoria",
   "APPELLO_TIPOLOGIA_ESAME": "Tipologia",
   "APPELLO_TIPOLOGIA_ESAME_REQUIRED": "Tipologia Esame obbligatorio",
-  "APPELLO_DELETE_TITLE": "Appello",
-  "APPELLO_DELETE_MESSAGE": "Vuoi cancellare l'appello?"
+  "RECENSIONE_DELETE_TITLE": "Recensione",
+  "RECENSIONE_DELETE_MESSAGE": "Vuoi cancellare la recensione?"
 }

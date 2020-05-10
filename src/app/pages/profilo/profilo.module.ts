@@ -9,6 +9,8 @@ import {ProfiloPage} from './profilo.page';
 import {HttpClient} from '@angular/common/http';
 import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import {createTranslateLoader} from '../../app.module';
+import {StarRatingModule} from 'ionic4-star-rating';
+import {CreaRecensionePageModule} from '../crea-recensione/crea-recensione.module';
 
 const routes: Routes = [
   {
@@ -18,19 +20,21 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [
-    CommonModule,
-    ReactiveFormsModule,
-    IonicModule,
-    TranslateModule.forChild({
-      loader: {
-        provide: TranslateLoader,
-        useFactory: (createTranslateLoader),
-        deps: [HttpClient]
-      }
-    }),
-    RouterModule.forChild(routes)
-  ],
+    imports: [
+        CommonModule,
+        ReactiveFormsModule,
+        CreaRecensionePageModule,
+        IonicModule,
+        TranslateModule.forChild({
+            loader: {
+                provide: TranslateLoader,
+                useFactory: (createTranslateLoader),
+                deps: [HttpClient]
+            }
+        }),
+        RouterModule.forChild(routes),
+        StarRatingModule
+    ],
   declarations: [ProfiloPage]
 })
 export class ProfiloPageModule {

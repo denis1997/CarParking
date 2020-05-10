@@ -13,6 +13,12 @@
   "LOGIN_ERROR_SUB_TITLE": "Username and/or password Wrong!",
   "REGISTRAZIONE_TITOLO": "Registration",
   "DETTAGLIO_PARCHEGGIO_TITOLO": "Parking Detail",
+  "CREA_RECENSIONE_TITLE": "Create review",
+  "RECENSIONE_NOME": "Title",
+  "RECENSIONE_NOME_REQUIRED": "Title required",
+  "RECENSIONE_DESCRIZIONE": "Description",
+  "RECENSIONE_DESCRIZIONE_REQUIRED": "Description required",
+  "VALUTAZIONE_RECENSIONE": "Rating",
 
 
   "PAGINA_COSTRUZIONE": "Page under construction!!!!!",
@@ -62,6 +68,6 @@
   "APPELLO_DATA_REQUIRED": "Date mandatory",
   "APPELLO_TIPOLOGIA_ESAME": "Type",
   "APPELLO_TIPOLOGIA_ESAME_REQUIRED": "Exam Type mandatory",
-  "APPELLO_DELETE_TITLE": "Exam session",
-  "APPELLO_DELETE_MESSAGE": "Do you want to delete the exam session?"
+  "RECENSIONE_DELETE_TITLE": "Review",
+  "APPELLO_DELETE_MESSAGE": "Do you want to delete the review?"
 }

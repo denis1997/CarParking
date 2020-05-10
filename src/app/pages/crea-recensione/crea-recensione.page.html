@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title text-center>{{'CREA_RECENSIONE_TITLE' | translate}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <form [formGroup]="recensioneFormModel">
+    <ion-list no-lines>
+      <ion-item class="animated fadeInUp" text-center>
+        <ion-label position="floating">{{ 'RECENSIONE_NOME' | translate }}</ion-label>
+        <ion-input type="email" formControlName="nome"></ion-input>
+      </ion-item>
+      <p ion-text class="text08" *ngIf="recensioneFormModel.get('nome').touched && recensioneFormModel.get('nome').invalid">
+        <ion-text color="danger">{{ 'RECENSIONE_NOME_REQUIRED' | translate }}</ion-text>
+      </p>
+      <ion-item class="animated fadeInUp" text-center>
+        <ion-label position="floating">{{ 'RECENSIONE_DESCRIZIONE' | translate }}</ion-label>
+        <ion-input formControlName="descrizione"></ion-input>
+      </ion-item>
+      <p ion-text class="text08" *ngIf="recensioneFormModel.get('descrizione').touched && recensioneFormModel.get('descrizione').invalid">
+        <ion-text color="danger">{{ 'RECENSIONE_DESCRIZIONE_REQUIRED' | translate }}</ion-text>
+      </p>
+    </ion-list>
+    <ion-item text-center>
+    <ion-label> {{'VALUTAZIONE_RECENSIONE' | translate}}</ion-label>
+    </ion-item>
+    <rating [(ngModel)]="rate"
+            formControlName="rate"
+            readonly="false"
+            size="30px">
+    </rating>
+    <div margin-top="30px" align="center">
+      <ion-button icon-left size="medium" shape="round" color="primary" (click)="onSubmit()" [disabled]="!recensioneFormModel.valid" tappable>
+        {{ 'SAVE_BUTTON' | translate }}
+      </ion-button>
+      <ion-button icon-left size="medium" shape="round" color="primary" (click)="cancel()" tappable>
+        {{ 'CANCEL_BUTTON' | translate }}
+      </ion-button>
+    </div>
+  </form>
+</ion-content>

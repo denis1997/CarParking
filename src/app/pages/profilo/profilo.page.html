@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar>
-    <ion-back-button slot="start" icon="arrow-dropleft"></ion-back-button>
+    <ion-back-button slot="start"> <ion-icon name="arrow-dropleft" color="primary"></ion-icon> </ion-back-button>
     <ion-title text-center>{{'PROFILO_TITOLO' | translate}}</ion-title>
     <ion-button slot="end" (click)="logout()">{{'LOGOUT_MENU' | translate}}</ion-button>
   </ion-toolbar>
@@ -12,16 +12,46 @@
   <ion-text color="primary">
   <h1 text-center><strong> {{utente.cognome + ' ' + utente.nome}}</strong></h1>
   </ion-text>
-  <form [formGroup]="profiloFormModel">
-    <ion-list no-lines>
-      <ion-item class="animated fadeInUp">
-        <ion-label position="floating">{{ 'EMAIL' | translate }}</ion-label>
-        <ion-input type="email" formControlName="email"></ion-input>
-      </ion-item>
-      <p ion-text class="text08" *ngIf="profiloFormModel.get('email').touched && profiloFormModel.get('email').invalid">
-        <ion-text color="danger">{{ 'EMAIL_REQUIRED' | translate }}</ion-text>
-      </p>
 
-    </ion-list>
-  </form>
+  <ion-item-divider color="primary">
+    <h4>Recensioni aggiunte</h4>
+  </ion-item-divider>
+
+  <ion-list *ngFor="let recensione of recensioni$ | async">
+      <ion-card class="recensioni">
+        <b>{{recensione.nome}}</b>
+        <ion-icon class="trash" style="float: right" name="trash" (click)="deleteRecensione(recensione)"></ion-icon>
+        <ion-icon class="trash" style="float: right" name="create" (click)="updateRecensione(recensione)"></ion-icon>
+        <ionic4-star-rating
+          activeIcon = "star"
+          defaultIcon = "star-outline"
+          activeColor = "#ffce00"
+          defaultColor = "#B0B0B0"
+          readonly="true"
+          fontSize="20px"
+          rating="{{recensione.rating}}">
+      </ionic4-star-rating>
+    <i>{{recensione.descrizione}}</i>
+
+    <ion-card [routerLink]="['/parcheggio', recensione.parcheggio.id]" color="tertiary">
+      <ion-icon class="icon" style="float: left" name="image"></ion-icon>
+      <ion-card-header>
+        <ion-card-title style="float: right">
+          {{recensione.parcheggio.nome}}
+        </ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ionic4-star-rating style="float: right"
+                activeIcon = "star"
+                defaultIcon = "star-outline"
+                activeColor = "#ffce00"
+                defaultColor = "#B0B0B0"
+                readonly="true"
+                fontSize="20px"
+                rating="{{recensione.parcheggio.rating}}">
+        </ionic4-star-rating>
+      </ion-card-content>
+    </ion-card>
+  </ion-card>
+  </ion-list>
 </ion-content>

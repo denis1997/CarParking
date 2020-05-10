@@ -4,9 +4,7 @@ export class Utente {
     nome: string;
     cognome: string;
     email: string;
-    matricola: string;
     telefono: string;
-    ruolo: string;
 
 
 }

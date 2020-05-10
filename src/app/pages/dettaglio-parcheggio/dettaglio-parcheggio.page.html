@@ -1,35 +1,75 @@
-<ion-header>
+<ion-header xmlns:slice="http://www.w3.org/1999/xhtml">
   <ion-toolbar>
-    <ion-back-button slot="start" icon="arrow-dropleft"></ion-back-button>
+    <ion-back-button slot="start"> <ion-icon class="back_button" name="arrow-dropleft" color="primary"></ion-icon> </ion-back-button>
     <ion-title text-center>{{'DETTAGLIO_PARCHEGGIO_TITOLO' | translate}}</ion-title>
     <ion-button slot="end" (click)="logout()">{{'LOGOUT_MENU' | translate}}</ion-button>
   </ion-toolbar>
 </ion-header>
 
-<ion-content padding *ngIf="(parcheggio$ | async) as parcheggio">
+<ion-content padding *ngIf="(parcheggio$| async) as parcheggio" >
   <ion-item-divider color="tertiary">
     <ion-text color="dark">
       <h1>{{parcheggio.nome}}</h1>
+      <ionic4-star-rating
+              activeIcon = "star"
+              defaultIcon = "star-outline"
+              activeColor = "#ffce00"
+              defaultColor = "#f4f4f4"
+              readonly="true"
+              fontSize="30px"
+              rating="{{parcheggio.rating}}">
+      </ionic4-star-rating>
     </ion-text>
-    <ion-icon slot="end" name="image"></ion-icon>
+    <ion-icon class="back_button" slot="end" name="image"></ion-icon>
   </ion-item-divider>
 
     <ion-item-divider color="medium">
-    <ion-label color="dark">DESCRIZIONE</ion-label>
+      <h4>Descrizione</h4>
     </ion-item-divider>
       <ion-item>{{parcheggio.descrizione}}</ion-item>
 
   <ion-item-divider color="medium">
-    <ion-label color="dark">COSTO</ion-label>
+    <h4>Prezzi</h4>
   </ion-item-divider>
   <ion-item>{{parcheggio.costo}}</ion-item>
 
   <ion-item-divider color="medium">
-    <ion-label color="dark">ORARIO</ion-label>
+    <h4>Orari d'apertura</h4>
   </ion-item-divider>
   <ion-item>{{parcheggio.orario}}</ion-item>
 
+    <ion-item-divider color="medium">
+    <h4>Recensioni</h4>
+  </ion-item-divider>
 
-
+  <ion-list>
+      <ion-item *ngFor="let recensione of recensioni$ | async">
+        <ion-label>
+          <div style="float: left">
+          <ion-avatar slot="start" class="avatar">
+            <img src="/assets/avatar.png">
+          </ion-avatar>
+            <p>{{recensione.utente.nome }} {{recensione.utente.cognome }}</p>
+          </div>
+          <div style="float: right">
+          <h2 text-wrap>{{recensione.nome}}</h2>
+            <ionic4-star-rating text-center
+                    activeIcon = "star"
+                    defaultIcon = "star-outline"
+                    activeColor = "#ffce00"
+                    defaultColor = "#B0B0B0"
+                    readonly="true"
+                    fontSize="25px"
+                    rating="{{recensione.rating}}">
+            </ionic4-star-rating>
+          </div>
+        </ion-label>
+      </ion-item>
+  </ion-list>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="createRecensione()">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
 
 </ion-content>

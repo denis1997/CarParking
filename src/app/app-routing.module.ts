@@ -11,11 +11,7 @@ const routes: Routes = [
   { path: 'registrazione', loadChildren: './pages/registrazione/registrazione.module#RegistrazionePageModule' },
   { path: 'profilo', loadChildren: './pages/profilo/profilo.module#ProfiloPageModule', canActivateChild: [AuthGuard]  },
   { path: 'lista-parcheggi', loadChildren: './pages/lista-parcheggi/lista-parcheggi.module#ListaParcheggiPageModule', canActivateChild: [AuthGuard] },
-  { path: 'dettaglio-parcheggio/:id', loadChildren: './pages/dettaglio-parcheggio/dettaglio-parcheggio.module#DettaglioParcheggioPageModule' },
-
-
-
-
+  { path: 'parcheggio/:id', loadChildren: './pages/dettaglio-parcheggio/dettaglio-parcheggio.module#DettaglioParcheggioPageModule'},
 ];
 
 @NgModule({

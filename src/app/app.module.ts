@@ -17,6 +17,7 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
 import {PlacesService} from './services/places.service';
 import {FormsModule} from '@angular/forms';
 import {httpInterceptorProviders} from './interceptors';
+import {StarRatingModule} from 'ionic4-star-rating';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -28,6 +29,7 @@ export function createTranslateLoader(http: HttpClient) {
   imports: [BrowserModule,
             HttpClientModule,
             FormsModule,
+            StarRatingModule,
             IonicModule.forRoot(),
             IonicStorageModule.forRoot(),
             TranslateModule.forRoot({

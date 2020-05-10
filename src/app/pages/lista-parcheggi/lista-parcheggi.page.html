@@ -1,6 +1,6 @@
 <ion-content padding>
   <ion-list>
-    <ion-item *ngFor="let parcheggio of parcheggio$ | async" [routerLink]="['/dettaglio-parcheggio', parcheggio.id]" routerDirection="forward" detail="true">
+    <ion-item *ngFor="let parcheggio of parcheggio$ | async" [routerLink]="['/parcheggio', parcheggio.id]"  routerDirection="forward" detail="true">
       <span>{{parcheggio.nome | slice:0:20}}</span>
 
     </ion-item>
