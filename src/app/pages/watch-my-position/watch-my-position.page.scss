@@ -1,0 +1,22 @@
+#myPosition{
+  height: 100%;
+  z-index: -1;
+  zoomControl: false;
+  scrollWheelZoom: true;
+}
+
+#locate{
+  z-index: 1;
+  position: absolute;
+}
+
+#carIcon{
+iconUrl: 'car.png';
+shadowUrl: 'leaf-shadow.png';
+}
+
+#icon{
+  height: 56px;
+  width: 56px;
+  color: #4c8dff;
+}

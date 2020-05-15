@@ -116,4 +116,16 @@ export class UtenteService {
         return this.http.put<Recensione>(URL.RECENSIONI, recensione);
     }
 
+    updatePosition(utente: Utente): Observable<Utente> {
+        return this.http.post<Utente>(URL.UPDATE_POSITION, utente,{observe:'response'}).pipe(
+            map((resp: HttpResponse<Utente>) => {
+                // Aggiornamento dell'utente nello storage.
+                // Utente memorizzato nello storage per evitare chiamata REST quando si vuole modificare il profilo
+                // e se l'utente chiude la app e la riapre i dati sono gia' presenti
+                this.storage.set(UTENTE_STORAGE, resp.body);
+                // update dell'observable dell'utente
+                this.utente$.next(resp.body);
+                return resp.body;
+            }));
+    }
 }

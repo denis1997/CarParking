@@ -12,7 +12,22 @@
 }
 
 .leaflet-popup-content {
-  width:auto !important;
-} 
+  width: auto !important;
+}
 
+#mapId2 {
+  height: 100%;
+  z-index: -1;
+  zoomControl: false;
+  scrollWheelZoom: true;
+}
+#search{
+  z-index: 1;
+  position: absolute;
+}
+#icon{
+  height: 56px;
+  width: 56px;
+  color: #4c8dff;
+}
 

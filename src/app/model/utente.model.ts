@@ -4,7 +4,8 @@ export class Utente {
     nome: string;
     cognome: string;
     email: string;
-    telefono: string;
+    latitude: number;
+    longitude: number;
 
 
 }

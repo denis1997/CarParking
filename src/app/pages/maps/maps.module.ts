@@ -4,13 +4,15 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { MapsPage } from './maps.page';
+import {TranslateModule} from '@ngx-translate/core';
 
 @NgModule({
     imports: [
         IonicModule,
         CommonModule,
         FormsModule,
-        RouterModule.forChild([{ path: '', component: MapsPage }])
+        RouterModule.forChild([{path: '', component: MapsPage}]),
+        TranslateModule
     ],
     declarations: [MapsPage]
 })

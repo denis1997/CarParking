@@ -54,7 +54,6 @@ export class ProfiloPage implements OnInit {
 
   onSubmit(): void {
     this.utente.email = this.profiloFormModel.value.email;
-    this.utente.telefono = this.profiloFormModel.value.telefono;
     this.utenteService.updateProfilo(this.utente).subscribe((nuovoUtente: Utente) => {
       this.navController.back();
     });

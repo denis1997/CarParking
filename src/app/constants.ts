@@ -9,7 +9,9 @@ export const URL = {
     UPDATE_PROFILO: URL_BASE + '/utente/updateprofilo',
     PARCHEGGIO: URL_BASE + '/parcheggio',
     RECENSIONI: URL_BASE + '/recensioni',
-    UTENTE: URL_BASE + '/utente'
+    UTENTE: URL_BASE + '/utente',
+    UPDATE_POSITION: URL_BASE + '/utente/updateposition',
+
 };
 
 export const X_AUTH = 'X-Auth';

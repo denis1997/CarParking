@@ -12,6 +12,7 @@ const routes: Routes = [
   { path: 'profilo', loadChildren: './pages/profilo/profilo.module#ProfiloPageModule', canActivateChild: [AuthGuard]  },
   { path: 'lista-parcheggi', loadChildren: './pages/lista-parcheggi/lista-parcheggi.module#ListaParcheggiPageModule', canActivateChild: [AuthGuard] },
   { path: 'parcheggio/:id', loadChildren: './pages/dettaglio-parcheggio/dettaglio-parcheggio.module#DettaglioParcheggioPageModule'},
+  { path: 'watch-my-position', loadChildren: './pages/watch-my-position/watch-my-position.module#MyPositionPageModule' },
 ];
 
 @NgModule({

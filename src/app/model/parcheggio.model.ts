@@ -6,5 +6,7 @@ export class Parcheggio {
     orario: string;
     rating: number;
     provincia: string;
+    latitude: number;
+    longitude: number;
 
 }
