@@ -16,6 +16,8 @@ export class MapsPage implements OnInit {
   newMarker: any;
   propertyList = [];
   private parcheggio$: Observable<Parcheggio[]>;
+  private parcheggi: Parcheggio[];
+
 
     constructor(private parcheggioService: ParcheggioService) { }
 
@@ -34,6 +36,13 @@ export class MapsPage implements OnInit {
           this.propertyList = json.properties;
           this.leafletMap();
         });
+    this.parcheggio$ = this.parcheggioService.list();
+    this.parcheggio$.subscribe(data => {
+          this.parcheggi = data;
+          this.parcheggi.forEach(parcheggio => {
+              L.marker([parcheggio.latitude, parcheggio.longitude]).addTo(this.map).bindPopup(parcheggio.nome);
+          });
+      });
   }
 
   leafletMap() {

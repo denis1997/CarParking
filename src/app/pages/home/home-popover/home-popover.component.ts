@@ -32,9 +32,8 @@ export class HomePopoverComponent implements OnInit {
             this.utente.latitude = resp.coords.latitude;
             this.utente.longitude = resp.coords.longitude;
             this.utenteService.updatePosition(this.utente).subscribe((utente: Utente) => {
+            this.presentToast();
             });
-            alert(this.utente.latitude + 'longitude' +
-                    this.utente.longitude);
         }).catch((error) => {
         console.log('Error getting location', error);
     });
