@@ -1,3 +1,9 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-back-button slot="start"> <ion-icon class="back_button" name="arrow-dropleft" color="primary"></ion-icon> </ion-back-button>
+        <ion-title text-center>Lista parcheggi</ion-title>
+    </ion-toolbar>
+</ion-header>
 <ion-content padding>
   <ion-list>
     <ion-item *ngFor="let parcheggio of parcheggio$ | async" [routerLink]="['/parcheggio', parcheggio.id]"  routerDirection="forward" detail="true">

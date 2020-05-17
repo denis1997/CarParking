@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-back-button slot="start"> <ion-icon class="back_button" name="arrow-dropleft" color="primary"></ion-icon> </ion-back-button>
+    <ion-title text-center>{{'RECENSIONI_TITOLO' | translate}}</ion-title>
+    <ion-button slot="end" (click)="logout()">{{'LOGOUT_MENU' | translate}}</ion-button>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list *ngFor="let recensione of recensioni$ | async">
+    <ion-card>
+      <b>{{recensione.nome}}</b>
+      <ionic4-star-rating
+              activeIcon = "star"
+              defaultIcon = "star-outline"
+              activeColor = "#ffce00"
+              defaultColor = "#B0B0B0"
+              readonly="true"
+              fontSize="20px"
+              rating="{{recensione.rating}}">
+      </ionic4-star-rating>
+      <i>{{recensione.descrizione}}</i><br><br>
+      <b>{{recensione.utente.nome}} {{recensione.utente.cognome}}</b>
+    </ion-card>
+  </ion-list>
+</ion-content>

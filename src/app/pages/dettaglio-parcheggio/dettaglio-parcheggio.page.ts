@@ -26,8 +26,6 @@ export class DettaglioParcheggioPage implements OnInit {
     private parcheggio$: Observable<Parcheggio>;
     private recensioni$: Observable<Recensione[]>;
     private idParcheggio: number;
-    private parcheggio: Parcheggio;
-    private recensioni: Recensione;
 
 
     constructor(private route: ActivatedRoute,
