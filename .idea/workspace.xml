@@ -2,19 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5e864a13-5a35-4631-b036-28a0fb401869" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/app/pages/recensioni/recensioni.module.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/pages/recensioni/recensioni.page.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/pages/recensioni/recensioni.page.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/pages/recensioni/recensioni.page.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/pages/recensioni/recensioni.page.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/model/parcheggio.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/model/parcheggio.model.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/dettaglio-parcheggio/dettaglio-parcheggio.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/dettaglio-parcheggio/dettaglio-parcheggio.page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/dettaglio-parcheggio/dettaglio-parcheggio.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/dettaglio-parcheggio/dettaglio-parcheggio.page.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/lista-parcheggi/lista-parcheggi.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/lista-parcheggi/lista-parcheggi.page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/i18n/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/i18n/en.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/i18n/it.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/i18n/it.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/home/home.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/home/home.page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/settings/settings.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/settings/settings.page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/settings/settings.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/settings/settings.page.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -51,7 +45,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="excluded.www.directory" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/Esami 2018-2019/Applicazioni dispositivi mobili/Altri progetti/ShopZone/ApplicazioneMobile-Codice-master" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
@@ -195,7 +189,8 @@
       <workItem from="1589024531926" duration="15136000" />
       <workItem from="1589121530036" duration="304000" />
       <workItem from="1589625133653" duration="7024000" />
-      <workItem from="1589712552805" duration="2660000" />
+      <workItem from="1589712552805" duration="7285000" />
+      <workItem from="1589748588552" duration="1018000" />
     </task>
     <servers />
   </component>

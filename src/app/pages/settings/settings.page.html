@@ -22,5 +22,17 @@
         {{ 'CANCEL_BUTTON' | translate }}
       </ion-button>
     </div>
-  </form>
+  </form><br><br>
+
+<ion-card>
+    <ion-text color="primary">
+      <h3 text-center>Segnala parcheggio</h3>
+    </ion-text>
+  <ion-item>
+    <ion-input [(ngModel)]="body" type="text" placeholder="Scrivi la descrizione del parcheggio" ></ion-input>
+  </ion-item>
+  <div align="center">
+  <ion-button (click)="send()" shape="round">Invia</ion-button>
+  </div>
+</ion-card>
 </ion-content>

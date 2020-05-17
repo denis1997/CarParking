@@ -8,7 +8,6 @@ import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 
-
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
@@ -18,10 +17,12 @@ import {PlacesService} from './services/places.service';
 import {FormsModule} from '@angular/forms';
 import {httpInterceptorProviders} from './interceptors';
 import {StarRatingModule} from 'ionic4-star-rating';
+import {EmailComposer} from '@ionic-native/email-composer/ngx';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
+
 
 @NgModule({
   declarations: [AppComponent],
@@ -47,6 +48,7 @@ export function createTranslateLoader(http: HttpClient) {
   ],
   providers: [
     StatusBar,
+      EmailComposer,
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
       PlacesService,

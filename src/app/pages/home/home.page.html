@@ -21,7 +21,7 @@
         </ion-item>
       </div>
       <div id="ricerche">
-        <ion-item expand="block" fill="clear" >
+        <ion-item expand="block" fill="clear" (click)="listaparcheggi()" >
             <ion-icon name="list" color="dark" slot="start"></ion-icon>
             <ion-label color="dark">{{"ULTIME_RICERCHE" | translate}}</ion-label>
         </ion-item>
@@ -34,7 +34,7 @@
            {{'MYACCOUNT_TAB' | translate }}
         </ion-tab-button>
 
-       <ion-tab-button tab="Preferiti"  (click)="listaparcheggi()">
+       <ion-tab-button tab="Preferiti">
            <ion-icon name="heart" color="dark"></ion-icon>
            {{'PREFERITI_TAB' | translate}}
        </ion-tab-button>
