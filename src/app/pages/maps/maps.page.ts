@@ -28,7 +28,7 @@ export class MapsPage implements OnInit {
 
 
   ionViewDidEnter() {
-    this.map = new Map('mapId2', { zoomControl: false }).setView([42.5787392, 13.975551999999999], 30);
+    this.map = new Map('mapId2', { zoomControl: false }).setView([42.5787392, 13.975551999999999], 7);
     new L.Control.Zoom({ position: 'bottomleft' }).addTo(this.map);
     tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(this.map);
     fetch('../../../assets/data.json').then(res => res.json())
@@ -36,11 +36,21 @@ export class MapsPage implements OnInit {
           this.propertyList = json.properties;
           this.leafletMap();
         });
+      const parkIcon = L.icon({
+          iconUrl: '../../../assets/CarPark.png',
+          iconSize: [25, 41],
+          iconAnchor: [25, 41],
+          popupAnchor: [-12, -41],
+          shadowUrl: '../../../assets/icon/marker-shadow.png',
+          shadowSize: [20, 41],
+          shadowAnchor: [20, 41],
+      });
     this.parcheggio$ = this.parcheggioService.list();
     this.parcheggio$.subscribe(data => {
           this.parcheggi = data;
           this.parcheggi.forEach(parcheggio => {
-              L.marker([parcheggio.latitude, parcheggio.longitude]).addTo(this.map).bindPopup(parcheggio.nome);
+              L.marker([parcheggio.latitude, parcheggio.longitude], {icon: parkIcon})
+                  .addTo(this.map).bindPopup(parcheggio.nome); //DENTRO A QUESTO BINDPOPUP ANDREBBE IL LINK
           });
       });
   }
@@ -86,12 +96,20 @@ export class MapsPage implements OnInit {
   }
 
     locatePosition() {
-        // tslint:disable-next-line:no-shadowed-variable
+        const utenteicon = L.icon({
+            iconUrl: '../../../assets/Omino.png',
+            iconSize: [30, 60],
+            iconAnchor: [30, 60],
+            popupAnchor: [-15, -60],
+            shadowUrl: '../../../assets/icon/marker-shadow.png',
+            shadowSize: [30, 60],
+            shadowAnchor: [30, 60],
+        });
         this.map.locate({setView: true}).on('locationfound', (e: any) => {
             const radius = e.accuracy;
             this.newMarker = L.marker([e.latitude, e.longitude], +
                 // tslint:disable-next-line:max-line-length
-                {enableHighAccuracy: true, watch: true}).addTo(this.map).bindPopup('You are within' + radius + ' meters from this point').openPopup();
+                {enableHighAccuracy: true, watch: true,}, {icon: utenteicon}).addTo(this.map).bindPopup('You are within' + radius + ' meters from this point').openPopup();
             L.circle([e.latitude, e.longitude], radius).addTo(this.map);
         });
   }
