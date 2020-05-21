@@ -14,6 +14,9 @@ const routes: Routes = [
   { path: 'parcheggio/:id', loadChildren: './pages/dettaglio-parcheggio/dettaglio-parcheggio.module#DettaglioParcheggioPageModule'},
   { path: 'watch-my-position', loadChildren: './pages/watch-my-position/watch-my-position.module#MyPositionPageModule' },
   { path: 'recensioni/:id', loadChildren: './pages/recensioni/recensioni.module#RecensioniPageModule' },
+  { path: 'preferiti/:id', loadChildren: './pages/preferiti/preferiti.module#PreferitiPageModule' },
+
+
 
 ];
 

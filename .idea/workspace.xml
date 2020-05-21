@@ -2,13 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5e864a13-5a35-4631-b036-28a0fb401869" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/app/model/preferiti.model.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/pages/preferiti/preferiti.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/pages/preferiti/preferiti.page.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/pages/preferiti/preferiti.page.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/pages/preferiti/preferiti.page.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/pages/preferiti/preferiti.page.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/constants.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/constants.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/model/parcheggio.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/model/parcheggio.model.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/model/utente.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/model/utente.model.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/dettaglio-parcheggio/dettaglio-parcheggio.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/dettaglio-parcheggio/dettaglio-parcheggio.page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/dettaglio-parcheggio/dettaglio-parcheggio.page.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/dettaglio-parcheggio/dettaglio-parcheggio.page.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/dettaglio-parcheggio/dettaglio-parcheggio.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/dettaglio-parcheggio/dettaglio-parcheggio.page.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/pages/home/home.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/home/home.page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/home/home.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/home/home.page.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/lista-parcheggi/lista-parcheggi.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/lista-parcheggi/lista-parcheggi.page.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/login/login.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/login/login.page.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/profilo/profilo.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/profilo/profilo.page.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/pages/settings/settings.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/settings/settings.page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/settings/settings.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/settings/settings.page.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/services/parcheggio.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/services/parcheggio.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/i18n/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/i18n/en.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/i18n/it.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/i18n/it.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -191,6 +207,8 @@
       <workItem from="1589625133653" duration="7024000" />
       <workItem from="1589712552805" duration="7285000" />
       <workItem from="1589748588552" duration="1018000" />
+      <workItem from="1589973922240" duration="24028000" />
+      <workItem from="1590058647878" duration="5510000" />
     </task>
     <servers />
   </component>

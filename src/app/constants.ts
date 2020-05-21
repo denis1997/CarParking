@@ -11,6 +11,7 @@ export const URL = {
     RECENSIONI: URL_BASE + '/recensioni',
     UTENTE: URL_BASE + '/utente',
     UPDATE_POSITION: URL_BASE + '/utente/updateposition',
+    PREFERITI: URL_BASE + '/preferiti',
 
 };
 

@@ -62,7 +62,9 @@
   "LANGUAGE": "Lingua",
   "EMAIL_REQUIRED": "Email obbligatoria",
 
-  "DETTAGLIO_NOTIZIA_TITOLO": "Dettaglio Notizia",
+  "PREFERITI_TITOLO": "Preferiti",
+  "PREFERITI_DELETE_TITLE":"Preferiti",
+  "PREFERITI_DELETE_MESSAGE": "Vuoi eliminare il parcheggio dai preferiti?",
 
   "RECENSIONI_TITOLO": "Recensioni",
   "DETTAGLIO_INSEGNAMENTO_TITOLO": "Dettaglio",
@@ -75,5 +77,5 @@
   "APPELLO_TIPOLOGIA_ESAME": "Tipologia",
   "APPELLO_TIPOLOGIA_ESAME_REQUIRED": "Tipologia Esame obbligatorio",
   "RECENSIONE_DELETE_TITLE": "Recensione",
-  "RECENSIONE_DELETE_MESSAGE": "Vuoi cancellare la recensione?"
+  "RECENSIONE_DELETE_MESSAGE": "Vuoi eliminare la recensione?"
 }

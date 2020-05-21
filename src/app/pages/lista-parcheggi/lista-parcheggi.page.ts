@@ -14,8 +14,6 @@ export class ListaParcheggiPage implements OnInit {
   constructor(private parcheggioService: ParcheggioService) { }
 
   ngOnInit() {
-    this.parcheggio$ = this.parcheggioService.list();
-
-  }
+    this.parcheggio$ = this.parcheggioService.list();}
 
 }

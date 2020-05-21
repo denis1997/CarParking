@@ -1,15 +1,25 @@
 <ion-header xmlns:slice="http://www.w3.org/1999/xhtml">
   <ion-toolbar>
     <ion-back-button slot="start"> <ion-icon class="back_button" name="arrow-dropleft" color="primary"></ion-icon> </ion-back-button>
-    <ion-title text-center>{{'DETTAGLIO_PARCHEGGIO_TITOLO' | translate}}</ion-title>
+    <ion-title class="ion-text-center">{{'DETTAGLIO_PARCHEGGIO_TITOLO' | translate}}</ion-title>
     <ion-button slot="end" (click)="logout()">{{'LOGOUT_MENU' | translate}}</ion-button>
   </ion-toolbar>
 </ion-header>
 
-<ion-content padding *ngIf="(parcheggio$| async) as parcheggio" >
+<ion-content class="ion-padding" *ngIf="(parcheggio$| async) as parcheggio" >
+    <ion-refresher closeDuration="500ms" slot="fixed" (ionRefresh)="doRefresh($event)">
+      <ion-refresher-content
+              pullingIcon="arrow-dropdown"
+              refreshingSpinner="circles">
+      </ion-refresher-content>
+    </ion-refresher>
   <ion-item-divider color="tertiary">
     <ion-text color="dark">
-      <h1>{{parcheggio.nome}}</h1>
+      <h1>{{parcheggio.nome}}
+
+        <ion-icon *ngIf="(! parcheggio.piaciuto)" class="preferiti" name="heart-empty" (click)="createPreferito()"></ion-icon>
+        <ion-icon *ngIf="parcheggio.piaciuto" class="preferiti" name="heart" ></ion-icon>
+      </h1>
       <ionic4-star-rating
               activeIcon = "star"
               defaultIcon = "star-outline"
@@ -58,8 +68,8 @@
             <p>{{recensione.utente.nome }} {{recensione.utente.cognome }}</p>
           </div>
           <div style="float: right">
-          <h2 text-wrap>{{recensione.nome}}</h2>
-            <ionic4-star-rating text-center
+          <h2 class="ion-text-wrap">{{recensione.nome}}</h2>
+            <ionic4-star-rating class="ion-text-center"
                     activeIcon = "star"
                     defaultIcon = "star-outline"
                     activeColor = "#ffce00"
@@ -71,7 +81,7 @@
           </div>
         </ion-label>
       </ion-item>
-    <nav text-center>
+    <nav class="ion-text-center">
     <a [routerLink]="['/recensioni', parcheggio.id]">Visualizza tutte le recensioni </a>
     </nav>
   </ion-list>

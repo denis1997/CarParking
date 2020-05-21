@@ -56,7 +56,9 @@
   "LANGUAGE": "Language",
   "EMAIL_REQUIRED": "Email mandatory",
 
-  "DETTAGLIO_NOTIZIA_TITOLO": "News Detail",
+  "PREFERITI_TITOLO": "Favorites",
+  "PREFERITI_DELETE_TITLE":"Favorites",
+  "PREFERITI_DELETE_MESSAGE": "Do you want to remove parking from favorites?",
 
   "RECENSIONI_TITOLO": "Review",
   "DETTAGLIO_INSEGNAMENTO_TITOLO": "Detail",

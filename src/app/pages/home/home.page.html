@@ -34,7 +34,7 @@
            {{'MYACCOUNT_TAB' | translate }}
         </ion-tab-button>
 
-       <ion-tab-button tab="Preferiti">
+       <ion-tab-button tab="Preferiti" [routerLink]="['/preferiti', utente.id]" >
            <ion-icon name="heart" color="dark"></ion-icon>
            {{'PREFERITI_TAB' | translate}}
        </ion-tab-button>

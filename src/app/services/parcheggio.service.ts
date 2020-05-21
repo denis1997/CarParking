@@ -4,6 +4,7 @@ import {Observable} from 'rxjs';
 import {Parcheggio} from '../model/parcheggio.model';
 import {URL} from '../constants';
 import {Recensione} from '../model/recensione.model';
+import {Preferiti} from '../model/preferiti.model';
 
 
 @Injectable({
@@ -34,8 +35,23 @@ export class ParcheggioService {
         return this.http.post<Recensione>(URL.RECENSIONI, recensione);
     }
 
-    updateRecensione(recensione: Recensione) {
-        return this.http.put<Recensione>(URL.RECENSIONI, recensione);
+    listPreferiti(idUtente): Observable<Preferiti[]> {
+        const preferitiUrl = `${URL.PREFERITI}/${idUtente}`;
+        return this.http.get<Preferiti[]>(preferitiUrl);
+    }
+
+    listPreferitiByIdUtente(utenteId: number) {
+        const apiUrl = `${URL.PREFERITI}/${utenteId}`;
+        return this.http.get<Preferiti[]>(apiUrl);
+    }
+
+    createPreferito(preferito: Preferiti) {
+        return this.http.post<Preferiti>(URL.PREFERITI, preferito);
+    }
+
+    deletePreferito(preferito: Preferiti) {
+        const deleteUrl = `${URL.PREFERITI}/${preferito.id}`;
+        return this.http.delete<Preferiti>(deleteUrl);
     }
 
 }

@@ -12,5 +12,5 @@ export class Parcheggio {
     provincia: string;
     latitude: number;
     longitude: number;
-
+    piaciuto: boolean;
 }

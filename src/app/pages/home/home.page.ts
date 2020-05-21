@@ -1,8 +1,10 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {NavController, PopoverController} from '@ionic/angular';
 import {Lingua} from '../../services/lingua.service';
 import {HomePopoverComponent} from './home-popover/home-popover.component';
 import {Observable} from 'rxjs';
+import {Utente} from '../../model/utente.model';
+import {UtenteService} from '../../services/utente.service';
 
 
 
@@ -11,14 +13,23 @@ import {Observable} from 'rxjs';
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
 })
-export class HomePage {
+export class HomePage implements OnInit {
 
   private lingue: Lingua[];
+  private utente: Utente;
 
 
 
   constructor(public popoverController: PopoverController,
+              public utenteService: UtenteService,
               private navController: NavController) {}
+
+  ngOnInit() {
+    this.utenteService.getUtente().subscribe((utente) => {
+      this.utente = utente;
+    });
+  }
+
 
   async notifications() {
     const popover = await this.popoverController.create({
@@ -42,6 +53,7 @@ export class HomePage {
     maps() {
     this.navController.navigateForward('maps');
     }
+    
 
 }
 

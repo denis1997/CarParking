@@ -74,7 +74,7 @@ export class LoginPage implements OnInit {
     this.navController.navigateForward('registrazione');
   }
 
-  back(){
+  back() {
     this.navController.navigateBack('home');
   }
 }
