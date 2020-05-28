@@ -1,10 +1,17 @@
- <div id="search">
-        <ion-searchbar autocomplete="" placeholder="{{'Inserire il nome della città' | translate}}" color="light" padding-top>
-            <ion-icon id="icon" name="pin" size="small" (click)="locatePosition()"></ion-icon>
-        </ion-searchbar>
- </div>
- <ion-content id="mapId2">
-<!--     <ion-item *ngFor="let parcheggio of parcheggio$ | async " [routerLink]="['/maps', parcheggio.latitude, parcheggio.longitude]" routerDirection="forward" detail="true">-->
-<!--         <span>{{newMarker[parcheggio.latitude, parcheggio.longitude]}}</span>-->
-<!--     </ion-item>-->
- </ion-content>
+<ion-content id="mapId2">
+    <ion-header>
+        <ion-tab-bar slot="top" >
+            <ion-tab-button tab="back" (click)="goBack()">
+                <ion-icon id="back" name="arrow-dropleft"></ion-icon>
+            </ion-tab-button>
+
+            <ion-tab-button tab="Locate Me" (click)="locatePosition()">
+                <ion-icon id="icon" name="pin"></ion-icon>
+            </ion-tab-button>
+
+            <ion-tab-button tab="Ricerca Città"  (click)="research()">
+                <ion-icon id="search" name="search"></ion-icon>
+            </ion-tab-button>
+        </ion-tab-bar>
+    </ion-header>
+</ion-content>

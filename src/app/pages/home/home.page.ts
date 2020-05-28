@@ -53,6 +53,10 @@ export class HomePage implements OnInit {
     maps() {
     this.navController.navigateForward('maps');
     }
+
+    research() {
+      this.navController.navigateForward('research');
+    }
     
 
 }

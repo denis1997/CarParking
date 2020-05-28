@@ -6,7 +6,7 @@
          <div class="logo"></div>
       </div>
 
-    <ion-searchbar [autocomplete]="" placeholder="{{'Inserire il nome della città' | translate}}" color="light"></ion-searchbar>
+    <ion-searchbar [autocomplete]="" placeholder="{{'Inserire il nome della città' | translate}}" color="light" (click)="research()"></ion-searchbar>
     <div id="button">
       <div id="posizione">
         <ion-item expand="block" fill="clear" (click)="notifications()">

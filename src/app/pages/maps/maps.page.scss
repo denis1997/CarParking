@@ -15,8 +15,16 @@
   width: auto !important;
 }
 
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 #mapId2 {
   height: 100%;
+  width: 100%;
   z-index: -1;
   zoomControl: false;
   scrollWheelZoom: true;
@@ -25,9 +33,42 @@
   z-index: 1;
   position: absolute;
 }
+
 #icon{
   height: 56px;
   width: 56px;
   color: #4c8dff;
+}
+
+#back{
+  height: 56px;
+  width: 56px;
+  color: #4c8dff;
+}
+
+#search{
+  height: 56px;
+  width: 56px;
+  color: #4c8dff;
+}
+
+#mapSearchContainer{
+  position:fixed;
+  top:20px;
+  right: 40px;
+  height:30px;
+  width:180px;
+  z-index:110;
+  font-size:10pt;
+  color:#5d5d5d;
+  border:solid 1px #bbb;
+  background-color:#f8f8f8;
+}
+
+#pointer{
+  position:absolute;
+  top:86px;
+  left:60px;
+  z-index:99999;
 }
 
