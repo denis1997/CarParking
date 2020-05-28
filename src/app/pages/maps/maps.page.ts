@@ -31,7 +31,6 @@ export class MapsPage implements OnInit {
 
     ngOnInit() {
         this.parcheggio$ = this.parcheggioService.list();
-        this.initFilteredItems();
     }
 
     ionViewDidEnter() {
