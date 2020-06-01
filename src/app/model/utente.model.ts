@@ -7,6 +7,7 @@ export class Utente {
     email: string;
     latitude: number;
     longitude: number;
+    immagineProfilo: string;
 
 
 }

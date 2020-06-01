@@ -117,7 +117,7 @@ export class UtenteService {
     }
 
     updatePosition(utente: Utente): Observable<Utente> {
-        return this.http.post<Utente>(URL.UPDATE_POSITION, utente,{observe:'response'}).pipe(
+        return this.http.post<Utente>(URL.UPDATE_POSITION, utente,{observe: 'response'}).pipe(
             map((resp: HttpResponse<Utente>) => {
                 // Aggiornamento dell'utente nello storage.
                 // Utente memorizzato nello storage per evitare chiamata REST quando si vuole modificare il profilo

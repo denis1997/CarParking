@@ -18,6 +18,8 @@ import {FormsModule} from '@angular/forms';
 import {httpInterceptorProviders} from './interceptors';
 import {StarRatingModule} from 'ionic4-star-rating';
 import {EmailComposer} from '@ionic-native/email-composer/ngx';
+import { Camera } from '@ionic-native/Camera/ngx';
+import { File } from '@ionic-native/file/ngx';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -50,6 +52,8 @@ export function createTranslateLoader(http: HttpClient) {
     StatusBar,
       EmailComposer,
     SplashScreen,
+      Camera,
+      File,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
       PlacesService,
       Storage,

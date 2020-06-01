@@ -1,3 +1,11 @@
+<ion-header xmlns:slice="http://www.w3.org/1999/xhtml">
+  <ion-toolbar>
+    <ion-back-button slot="start" class="back_button" name="arrow-dropleft" color="primary"></ion-back-button>
+    <ion-title class="ion-text-center">{{'DETTAGLIO_PARCHEGGIO_TITOLO' | translate}}</ion-title>
+    <ion-button slot="end" (click)="logout()">{{'LOGOUT_MENU' | translate}}</ion-button>
+  </ion-toolbar>
+</ion-header>
+
 <ion-content>
   <ion-searchbar placeholder="Cerca città o parcheggio"  [(ngModel)]="ricerca" (ionChange)="resetCitta()" animated="true"> </ion-searchbar>
   <ion-list>

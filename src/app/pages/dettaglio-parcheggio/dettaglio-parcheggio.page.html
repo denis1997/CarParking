@@ -1,6 +1,6 @@
 <ion-header xmlns:slice="http://www.w3.org/1999/xhtml">
   <ion-toolbar>
-    <ion-back-button slot="start"> <ion-icon class="back_button" name="arrow-dropleft" color="primary"></ion-icon> </ion-back-button>
+    <ion-back-button slot="start" class="back_button" color="primary">  </ion-back-button>
     <ion-title class="ion-text-center">{{'DETTAGLIO_PARCHEGGIO_TITOLO' | translate}}</ion-title>
     <ion-button slot="end" (click)="logout()">{{'LOGOUT_MENU' | translate}}</ion-button>
   </ion-toolbar>
@@ -18,7 +18,7 @@
       <h1>{{parcheggio.nome}}
 
         <ion-icon *ngIf="(! parcheggio.piaciuto)" class="preferiti" name="heart-empty" (click)="createPreferito()"></ion-icon>
-        <ion-icon *ngIf="parcheggio.piaciuto" class="preferiti" name="heart" ></ion-icon>
+        <ion-icon *ngIf="parcheggio.piaciuto" class="preferiti" name="heart" (click)="createPreferito()" ></ion-icon>
       </h1>
       <ionic4-star-rating
               activeIcon = "star"

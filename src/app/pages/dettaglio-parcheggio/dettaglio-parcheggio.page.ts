@@ -96,26 +96,33 @@ export class DettaglioParcheggioPage implements OnInit {
     }
 
     createPreferito(): void {
-        this.preferito.utente = this.utente$.getValue();
-        this.preferito.parcheggio = this.parcheggio;
-        this.parcheggioService.createPreferito(this.preferito).subscribe((nuovoPreferito: Preferiti) => {
-            this.parcheggio.piaciuto = true;
-            this.presentToastAggiunto();
-        });
+        if (this.parcheggio.piaciuto === false) {
+            this.preferito.utente = this.utente$.getValue();
+            this.preferito.parcheggio = this.parcheggio;
+            this.parcheggioService.createPreferito(this.preferito).subscribe((nuovoPreferito: Preferiti) => {
+                this.parcheggio.piaciuto = true;
+                this.presentToastAggiunto();
+            });
+        } else {
+                this.presentToastNonAggiunto();
         }
+    }
 
     async presentToastAggiunto() {
         const toast = await this.toastController.create({
             message: 'Parcheggio aggiunto ai preferiti',
-            duration: 3000
+            duration: 1000,
+            position: 'middle'
         });
         toast.present();
     }
 
     async presentToastNonAggiunto() {
         const toast = await this.toastController.create({
-            message: 'Parcheggio non aggiunto ai preferiti',
-            duration: 3000
+            message: 'Parcheggio già presente nei preferiti',
+            duration: 1000,
+            position: 'middle'
+
         });
         toast.present();
     }

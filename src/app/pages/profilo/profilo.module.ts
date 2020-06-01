@@ -12,6 +12,7 @@ import {createTranslateLoader} from '../../app.module';
 import {StarRatingModule} from 'ionic4-star-rating';
 import {CreaRecensionePageModule} from '../crea-recensione/crea-recensione.module';
 
+
 const routes: Routes = [
   {
     path: '',

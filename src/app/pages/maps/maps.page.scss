@@ -15,12 +15,6 @@
   width: auto !important;
 }
 
-html, body {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
 
 #mapId2 {
   height: 100%;
@@ -28,22 +22,6 @@ html, body {
   z-index: -1;
   zoomControl: false;
   scrollWheelZoom: true;
-}
-#search{
-  z-index: 1;
-  position: absolute;
-}
-
-#icon{
-  height: 56px;
-  width: 56px;
-  color: #4c8dff;
-}
-
-#back{
-  height: 56px;
-  width: 56px;
-  color: #4c8dff;
 }
 
 #search{
@@ -71,4 +49,17 @@ html, body {
   left:60px;
   z-index:99999;
 }
+
+.back {
+  height: 56px;
+  width: 56px;
+  color: #4c8dff;
+}
+
+.right{
+  height: 40px;
+  width: 40px;
+  color: #4c8dff;
+}
+
 

@@ -4,11 +4,13 @@ import {Lingua, LinguaService} from '../../services/lingua.service';
 import {UtenteService} from '../../services/utente.service';
 import {BehaviorSubject, Observable} from 'rxjs';
 import {Utente} from '../../model/utente.model';
-import {AlertController, IonItemSliding, ModalController, NavController} from '@ionic/angular';
+import {ActionSheetController, AlertController, IonItemSliding, ModalController, NavController} from '@ionic/angular';
 import {Recensione} from '../../model/recensione.model';
 import {OverlayEventDetail} from '@ionic/core';
 import {TranslateService} from '@ngx-translate/core';
 import {CreaRecensionePage} from '../crea-recensione/crea-recensione.page';
+import { Camera, CameraOptions } from '@ionic-native/Camera/ngx';
+import { File } from '@ionic-native/file/ngx';
 
 @Component({
   selector: 'app-profilo',
@@ -24,16 +26,21 @@ export class ProfiloPage implements OnInit {
   private messageTitle: string;
   private deleteButton: string;
   private cancelButton: string;
+  private utente$: BehaviorSubject<Utente>;
 
   constructor(private formBuilder: FormBuilder,
               private alertController: AlertController,
               private utenteService: UtenteService,
               private modalController: ModalController,
               private translateService: TranslateService,
+              private camera: Camera,
+              public actionSheetController: ActionSheetController,
+              private file: File,
               private navController: NavController) {
   }
 
   ngOnInit() {
+    this.utente$ = this.utenteService.getUtente();
     this.initTranslate();
     this.profiloFormModel = this.formBuilder.group({
       email: ['', Validators.compose([
@@ -104,6 +111,46 @@ export class ProfiloPage implements OnInit {
     });
 
     await alert.present();
+  }
+
+  pickImage(sourceType) {
+    const options: CameraOptions = {
+      quality: 100,
+      correctOrientation: true,
+      sourceType,
+      destinationType: this.camera.DestinationType.DATA_URL,
+      encodingType: this.camera.EncodingType.JPEG,
+      mediaType: this.camera.MediaType.PICTURE,
+    };
+    this.camera.getPicture(options).then((imageData) => {
+      this.utente.immagineProfilo = imageData;
+      this.utenteService.updateProfilo(this.utente).subscribe((nuovoUtente: Utente) => {
+      });
+    });
+  }
+
+  async selectImage() {
+    const actionSheet = await this.actionSheetController.create({
+      buttons: [{
+        text: 'Carica dalla Galleria',
+        handler: () => {
+          this.pickImage(this.camera.PictureSourceType.PHOTOLIBRARY);
+        }
+      },
+        {
+          text: 'Usa Fotocamera',
+          handler: () => {
+            this.pickImage(this.camera.PictureSourceType.CAMERA);
+          }
+        },
+        {
+          text: 'Cancel',
+          role: 'cancel'
+        }
+      ]
+    });
+    await actionSheet.present();
+
   }
 
   initTranslate() {

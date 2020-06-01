@@ -4,6 +4,7 @@ import * as L from 'leaflet';
 import {Utente} from '../../model/utente.model';
 import {UtenteService} from '../../services/utente.service';
 import zoom = control.zoom;
+import {NavController} from '@ionic/angular';
 
 @Component({
   selector: 'app-my-position',
@@ -16,7 +17,8 @@ export class WatchMyPositionPage implements OnInit {
   propertyList = [];
   private utente: Utente;
 
-  constructor(private utenteService: UtenteService) { }
+  constructor(private utenteService: UtenteService,
+              private navController: NavController) { }
 
   ngOnInit() {
     this.utenteService.getUtente().subscribe((utente) => {
@@ -26,7 +28,7 @@ export class WatchMyPositionPage implements OnInit {
 
   ionViewDidEnter() {
     this.map = new L.Map('myPosition', { zoomControl: false }).setView([this.utente.latitude, this.utente.longitude], 14);
-    new L.Control.Zoom({ position: 'topright' }).addTo(this.map);
+    new L.Control.Zoom({ position: 'bottomleft' }).addTo(this.map);
     tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(this.map);
     fetch('../../../assets/data.json').then(res => res.json())
         .then(json => {
@@ -67,5 +69,9 @@ export class WatchMyPositionPage implements OnInit {
       this.newMarker = L.marker([e.latitude, e.longitude], {icon: utenteicon})
           .addTo(this.map).bindPopup('You are within' + radius + ' meters from this point').openPopup();
     });
+  }
+
+  goBack() {
+    this.navController.navigateBack('home');
   }
 }

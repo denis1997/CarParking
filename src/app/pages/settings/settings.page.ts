@@ -57,7 +57,7 @@ export class SettingsPage implements OnInit {
 
   send() {
   const email = {
-  to: 'denisdipatrizio4@gmail.com',
+  to: 'carparking@gmail.com',
     subject: 'Parcheggio Segnalato',
     body: this.body,
     cc: [],

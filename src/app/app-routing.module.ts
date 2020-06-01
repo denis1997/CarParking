@@ -15,6 +15,8 @@ const routes: Routes = [
   { path: 'watch-my-position', loadChildren: './pages/watch-my-position/watch-my-position.module#MyPositionPageModule' },
   { path: 'recensioni/:id', loadChildren: './pages/recensioni/recensioni.module#RecensioniPageModule' },
   { path: 'preferiti/:id', loadChildren: './pages/preferiti/preferiti.module#PreferitiPageModule' },
+  { path: 'research', loadChildren: './pages/research/research.module#ResearchPageModule' },
+
 
 
 

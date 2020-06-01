@@ -1,14 +1,16 @@
 <ion-header>
   <ion-toolbar>
-    <ion-back-button slot="start"> <ion-icon name="arrow-dropleft" color="primary"></ion-icon> </ion-back-button>
+    <ion-back-button slot="start" class="back_button" color="primary">  </ion-back-button>
     <ion-title class="ion-text-center">{{'PROFILO_TITOLO' | translate}}</ion-title>
     <ion-button slot="end"  (click)="logout()" >{{'LOGOUT_MENU' | translate}}</ion-button>
   </ion-toolbar>
 </ion-header>
 <ion-content class="ion-padding">
-    <ion-avatar class="avatar">
-      <img src="/assets/avatar.png">
+  <form [formGroup]="profiloFormModel">
+  <ion-avatar class="avatar">
+      <ion-img src="data:image/jpeg;base64,{{utente.immagineProfilo}}"  (click)="selectImage()"></ion-img>
     </ion-avatar>
+  </form>
   <ion-text color="primary">
   <h1 class="ion-text-center"><strong> {{utente.cognome + ' ' + utente.nome}}</strong></h1>
   </ion-text>
