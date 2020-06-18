@@ -21,11 +21,9 @@
   "VALUTAZIONE_RECENSIONE": "Rating",
   "MAPPA_TITOLO": "Maps",
   "VISUALIZZA_POSIZIONE_TITOLO": "Watch Position",
+  "Cerca città o parcheggio": "Search city or parking",
 
 
-
-
-  "PAGINA_COSTRUZIONE": "Page under construction!!!!!",
 
   "USERNAME": "Username",
   "PASSWORD": "Password",
@@ -41,39 +39,54 @@
   "SETTINGS" : "Settings",
   "LA_TUA_POSIZIONE" : "Your position",
   "VISUALIZZA_MAPPA" : "View map",
-  "ULTIME_RICERCHE" : "Latest research",
+  "LISTA_PARCHEGGI" : "Parking list",
   "VISUALIZZA_POSIZIONE" : "View position",
   "SALVA_POSIZIONE" : "Save position",
   "Inserire il nome della città" : "Insert a city name",
-  "CANCEL_BUTTON": "cancel",
+  "CANCEL_BUTTON": "Cancel",
   "PROFILO_MENU": "Profile",
   "LOGOUT_MENU": "Logout",
   "MYACCOUNT_TAB": "My Account",
-  "ORARIO_TAB": "Calendar",
-  "APPELLI_TAB": "Exam sessions",
   "PREFERITI_TAB": "Favorite",
   "IMPOSTAZIONI_TAB": "Settings",
 
   "PROFILO_TITOLO": "Profile",
-  "MATRICOLA": "Matricola",
-  "EMAIL": "Email",
   "LANGUAGE": "Language",
   "EMAIL_REQUIRED": "Email mandatory",
 
   "PREFERITI_TITOLO": "Favorites",
   "PREFERITI_DELETE_TITLE":"Favorites",
   "PREFERITI_DELETE_MESSAGE": "Do you want to remove parking from favorites?",
+  "RECENSIONE_DELETE_MESSAGE": "Do you want to delete this review?",
+
 
   "RECENSIONI_TITOLO": "Review",
-  "DETTAGLIO_INSEGNAMENTO_TITOLO": "Detail",
-  "APPELLI_TITOLO": "Exam sessions",
-  "APPELLO_TITOLO": "Exam session",
-  "APPELLO_DESCRIZIONE": "Description",
-  "APPELLO_DESCRIZIONE_REQUIRED": "Description mandatory",
-  "APPELLO_DATA": "Date",
-  "APPELLO_DATA_REQUIRED": "Date mandatory",
-  "APPELLO_TIPOLOGIA_ESAME": "Type",
-  "APPELLO_TIPOLOGIA_ESAME_REQUIRED": "Exam Type mandatory",
   "RECENSIONE_DELETE_TITLE": "Review",
-  "APPELLO_DELETE_MESSAGE": "Do you want to delete the review?"
+  "RECENSIONI_AGGIUNTE": "Your Reviews ",
+  "PARCHEGGIO_AGGIUNTO": "Parking added to favorites",
+  "PARCHEGGIO_NON_AGGIUNTO": "Parking already added in the favorites",
+  "POSIZIONE_SALVATA": "Your location has been saved.",
+  "POSIZIONE_NON_SALVATA": "ERROR! Your location has not been saved.",
+  "DESCRIZIONE": "Description",
+  "INDIRIZZO": "Address",
+  "TELEFONO": "Telephone number",
+  "PREZZI": "Prices",
+  "1ORA": "1 Hour",
+  "24ORE": "24 Hours",
+  "MENSILE": "Monthly",
+  "ORARI": "Time tables",
+  "RECENSIONI": "Reviews",
+  "VISUALIZZA_RECENSIONI": "View all reviews",
+  "SEGNALA_PARCHEGGIO": "Report new parking",
+  "DESCRIZIONE_PARCHEGGIO": "Write parking description ",
+  "INVIA": "Send",
+  "TOKEN1": "You are within ",
+  "TOKEN2": " meters from this location",
+  "TOKEN3": "Your car is here",
+  "GALLERIA": "Upload from gallery",
+  "FOTOCAMERA": "Use Camera",
+  "CANCELLA": "Cancel"
+
+
+
 }

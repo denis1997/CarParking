@@ -27,6 +27,9 @@ export class ProfiloPage implements OnInit {
   private deleteButton: string;
   private cancelButton: string;
   private utente$: BehaviorSubject<Utente>;
+  private galleria: string;
+  private fotocamera: string;
+  private cancella: string;
 
   constructor(private formBuilder: FormBuilder,
               private alertController: AlertController,
@@ -57,13 +60,6 @@ export class ProfiloPage implements OnInit {
   logout() {
     this.utenteService.logout();
     this.navController.navigateRoot('home');
-  }
-
-  onSubmit(): void {
-    this.utente.email = this.profiloFormModel.value.email;
-    this.utenteService.updateProfilo(this.utente).subscribe((nuovoUtente: Utente) => {
-      this.navController.back();
-    });
   }
 
   listRecensioni() {
@@ -132,25 +128,34 @@ export class ProfiloPage implements OnInit {
   async selectImage() {
     const actionSheet = await this.actionSheetController.create({
       buttons: [{
-        text: 'Carica dalla Galleria',
+        text: this.galleria,
         handler: () => {
           this.pickImage(this.camera.PictureSourceType.PHOTOLIBRARY);
         }
       },
         {
-          text: 'Usa Fotocamera',
+          text: this.fotocamera,
           handler: () => {
             this.pickImage(this.camera.PictureSourceType.CAMERA);
           }
         },
         {
-          text: 'Cancel',
+          text: this.cancella,
           role: 'cancel'
         }
       ]
     });
     await actionSheet.present();
 
+  }
+
+  averageRating(recensioni: Recensione[] ) {
+    if (recensioni.length === 0) { return  0; }
+    let tot = 0;
+    for (const r of recensioni ) {
+      tot += r.rating;
+    }
+    return tot / recensioni.length;
   }
 
   initTranslate() {
@@ -165,6 +170,15 @@ export class ProfiloPage implements OnInit {
     });
     this.translateService.get('CANCEL_BUTTON').subscribe((data: string) => {
       this.cancelButton = data;
+    });
+    this.translateService.get('GALLERIA').subscribe((data: string) => {
+      this.galleria = data;
+    });
+    this.translateService.get('FOTOCAMERA').subscribe((data: string) => {
+      this.fotocamera = data;
+    });
+    this.translateService.get('CANCELLA').subscribe((data: string) => {
+      this.cancella = data;
     });
   }
 

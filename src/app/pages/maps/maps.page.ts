@@ -6,6 +6,7 @@ import {Observable} from 'rxjs';
 import {ParcheggioService} from '../../services/parcheggio.service';
 import {NavController} from '@ionic/angular';
 import { ActivatedRoute } from '@angular/router';
+import {TranslateService} from '@ngx-translate/core';
 
 
 @Component({
@@ -22,14 +23,18 @@ export class MapsPage implements OnInit {
     private parcheggi: Parcheggio[];
     latitude: number;
     longitude: number;
-
+    private token1;
+    private token2;
 
 
     constructor(private parcheggioService: ParcheggioService,
+                private translateService: TranslateService,
                 private navController: NavController,
-                private route: ActivatedRoute) { }
+                private route: ActivatedRoute) {
+    }
 
     ngOnInit() {
+        this.initTranslate();
         this.parcheggio$ = this.parcheggioService.list();
     }
 
@@ -48,7 +53,6 @@ export class MapsPage implements OnInit {
         fetch('../../../assets/data.json').then(res => res.json())
             .then(json => {
                 this.propertyList = json.properties;
-                this.leafletMap();
             });
         const myIcon = L.icon({
             iconUrl: '../../../assets/CarPark.png',
@@ -70,42 +74,7 @@ export class MapsPage implements OnInit {
             });
         });
     }
-    leafletMap() {
-        // tslint:disable-next-line:max-line-length
-        // const myPosition = navigator.geolocation.getCurrentPosition(onSuccess, onError, {maximumAge: 3000, timeout: 5000, enableHighAccuracy: true});
-        //  L.marker([latitute , longitude]).addTo(this.map);
-        // L.marker([42.5879 , 13.98]).addTo(this.map);
-        // L.marker([42.5873 , 13.98]).addTo(this.map);
-        // L.marker([42.5875 , 13.98]).addTo(this.map);
-        // onSuccess Callback
-//   This method accepts a `Position` object, which contains
-//   the current GPS coordinates
-//
-// onError Callback receives a PositionError object
-//
-        // onSuccess Callback
-// This method accepts a Position object, which contains the
-// current GPS coordinates
-//
-        // tslint:disable-next-line:only-arrow-functions prefer-const
-        function onSuccess(position) {
-            alert('Latitude: '          + position.coords.latitude        + '\n' +
-                'Longitude: '         + position.coords.longitude         + '\n' +
-                'Altitude: '          + position.coords.altitude          + '\n' +
-                'Accuracy: '          + position.coords.accuracy          + '\n' +
-                'Altitude Accuracy: ' + position.coords.altitudeAccuracy  + '\n' +
-                'Heading: '           + position.coords.heading           + '\n' +
-                'Speed: '             + position.coords.speed             + '\n' +
-                'Timestamp: '         + position.timestamp                + '\n');
-        }
 
-// onError Callback receives a PositionError object
-//
-        function onError(error) {
-            alert('code: '    + error.code    + '\n' +
-                'message: ' + error.message + '\n');
-        }
-    }
     ionViewWillLeave() {
         this.map.remove();
     }
@@ -124,14 +93,24 @@ export class MapsPage implements OnInit {
         this.map.locate({setView: true}).on('locationfound', (e: any) => {
             const radius = e.accuracy;
             this.newMarker = L.marker([e.latitude, e.longitude], {icon: utenteicon}).addTo(this.map)
-                .bindPopup('You are within' + radius + ' meters from this point').openPopup();
+                .bindPopup(this.token1 + radius + this.token2).openPopup();
         });
     }
+
     research() {
         this.navController.navigateForward('research');
     }
 
     goBack() {
         this.navController.navigateBack('home');
+    }
+
+    initTranslate() {
+        this.translateService.get('TOKEN1').subscribe((data: string) => {
+            this.token1 = data;
+        });
+        this.translateService.get('TOKEN2').subscribe((data: string) => {
+            this.token2 = data;
+        });
     }
 }

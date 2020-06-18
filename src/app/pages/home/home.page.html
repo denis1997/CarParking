@@ -23,7 +23,7 @@
       <div id="ricerche">
         <ion-item expand="block" fill="clear" (click)="listaparcheggi()" >
             <ion-icon name="list" color="dark" slot="start"></ion-icon>
-            <ion-label color="dark">{{"ULTIME_RICERCHE" | translate}}</ion-label>
+            <ion-label color="dark">{{"LISTA_PARCHEGGI" | translate}}</ion-label>
         </ion-item>
       </div>
     </div>
@@ -34,7 +34,7 @@
            {{'MYACCOUNT_TAB' | translate }}
         </ion-tab-button>
 
-       <ion-tab-button tab="Preferiti" [routerLink]="['/preferiti', utente.id]" >
+       <ion-tab-button tab="Preferiti" (click)="preferiti()" >
            <ion-icon name="heart" color="dark"></ion-icon>
            {{'PREFERITI_TAB' | translate}}
        </ion-tab-button>
