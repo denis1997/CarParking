@@ -2,7 +2,7 @@
   <ion-toolbar>
     <ion-back-button slot="start" class="back_button" color="primary">  </ion-back-button>
     <ion-title class="ion-text-center">{{'PROFILO_TITOLO' | translate}}</ion-title>
-    <ion-icon class="logout" name="log-out" slot="end" (click)="logout()"></ion-icon>
+    <ion-button slot="end"  (click)="logout()" >{{'LOGOUT_MENU' | translate}}</ion-button>
   </ion-toolbar>
 </ion-header>
 <ion-content class="ion-padding">
@@ -16,7 +16,7 @@
   </ion-text>
 
   <ion-item-divider color="primary">
-    <h4>{{"RECENSIONI_AGGIUNTE" | translate}}</h4>
+    <h4>Recensioni aggiunte</h4>
   </ion-item-divider>
 
   <ion-list *ngFor="let recensione of recensioni$ | async">
@@ -35,24 +35,24 @@
       </ionic4-star-rating>
     <i>{{recensione.descrizione}}</i>
 
-    <ion-card  no-padding [routerLink]="['/parcheggio', recensione.parcheggio.id]" color="tertiary">
-      <ion-card-header class="card-header">
-        <ion-img class="image" src="data:image/jpeg;base64,{{recensione.parcheggio.immagineParcheggio}}" ></ion-img>
-        <div >
-          <h3 class="parcheggio__nome">
-            {{recensione.parcheggio.nome}}
-          </h3>
-          <ionic4-star-rating *ngIf="(recensioni$| async) as recensioni"
-                              activeIcon = "star"
-                              defaultIcon = "star-outline"
-                              activeColor = "#ffce00"
-                              defaultColor = "#B0B0B0"
-                              readonly="true"
-                              fontSize="20px"
-                              rating="{{averageRating(recensioni)}}">
-          </ionic4-star-rating>
-        </div>
+    <ion-card [routerLink]="['/parcheggio', recensione.parcheggio.id]" color="tertiary">
+      <ion-icon class="icon" style="float: left" name="image"></ion-icon>
+      <ion-card-header>
+        <ion-card-title style="float: right">
+          {{recensione.parcheggio.nome}}
+        </ion-card-title>
       </ion-card-header>
+      <ion-card-content>
+        <ionic4-star-rating style="float: right"
+                activeIcon = "star"
+                defaultIcon = "star-outline"
+                activeColor = "#ffce00"
+                defaultColor = "#B0B0B0"
+                readonly="true"
+                fontSize="20px"
+                rating="{{recensione.parcheggio.rating}}">
+        </ionic4-star-rating>
+      </ion-card-content>
     </ion-card>
   </ion-card>
   </ion-list>

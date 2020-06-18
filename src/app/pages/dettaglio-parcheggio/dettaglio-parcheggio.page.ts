@@ -35,8 +35,6 @@ export class DettaglioParcheggioPage implements OnInit {
     private parcheggio: Parcheggio;
     private preferiti$: Observable<Preferiti[]>;
     private idUtente: number;
-    private aggiunto: string;
-    private nonaggiunto: string;
 
 
 
@@ -52,11 +50,12 @@ export class DettaglioParcheggioPage implements OnInit {
     }
 
     ngOnInit() {
-        this.initTranslate();
         this.utente$ = this.utenteService.getUtente();
         this.idUtente = this.utente$.getValue().id;
         this.route.paramMap.subscribe((params: ParamMap) => {
             this.parcheggio$ = this.parcheggioService.findById(parseInt(params.get('id'), 0));
+        });
+        this.route.paramMap.subscribe((params: ParamMap) => {
             this.idParcheggio = parseInt(params.get('id'), 0);
             this.listRecensioni();
         });
@@ -111,7 +110,7 @@ export class DettaglioParcheggioPage implements OnInit {
 
     async presentToastAggiunto() {
         const toast = await this.toastController.create({
-            message: this.aggiunto,
+            message: 'Parcheggio aggiunto ai preferiti',
             duration: 1000,
             position: 'middle'
         });
@@ -120,7 +119,7 @@ export class DettaglioParcheggioPage implements OnInit {
 
     async presentToastNonAggiunto() {
         const toast = await this.toastController.create({
-            message: this.nonaggiunto,
+            message: 'Parcheggio già presente nei preferiti',
             duration: 1000,
             position: 'middle'
 
@@ -135,25 +134,6 @@ export class DettaglioParcheggioPage implements OnInit {
         setTimeout(() => {
             event.target.complete();
         }, 3000);
-    }
-
-    averageRating(recensioni: Recensione[] ) {
-        if (recensioni.length === 0) { return  0; }
-        let tot = 0;
-        for (const r of recensioni ) {
-            tot += r.rating;
-        }
-        return tot / recensioni.length;
-    }
-
-    initTranslate() {
-        this.translateService.get('PARCHEGGIO_AGGIUNTO').subscribe((data: string) => {
-            this.aggiunto = data;
-        });
-        this.translateService.get('PARCHEGGIO_NON_AGGIUNTO').subscribe((data: string) => {
-            this.nonaggiunto = data;
-        });
-
     }
 
 }

@@ -57,10 +57,7 @@ export class HomePage implements OnInit {
     research() {
       this.navController.navigateForward('research');
     }
-
-    preferiti() {
-    this.navController.navigateForward('/preferiti/' );
-    }
+    
 
 }
 

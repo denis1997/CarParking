@@ -8,7 +8,6 @@ export class Utente {
     latitude: number;
     longitude: number;
     immagineProfilo: string;
-    loggato: boolean;
 
 
 }

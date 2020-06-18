@@ -25,9 +25,6 @@ export class ParcheggioService {
         return this.http.get<Parcheggio>(apiURL);
     }
 
-    creaRicerche(parcheggio: Parcheggio) {
-        return this.http.post<Parcheggio>(URL.PARCHEGGIO, parcheggio);
-    }
 
     listRecensioni(idParcheggio): Observable<Recensione[]> {
         const recensioniUrl = `${URL.PARCHEGGIO}/${idParcheggio}/recensioni`;

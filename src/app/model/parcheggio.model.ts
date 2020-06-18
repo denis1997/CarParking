@@ -13,5 +13,4 @@ export class Parcheggio {
     latitude: number;
     longitude: number;
     piaciuto: boolean;
-    immagineParcheggio: string;
 }

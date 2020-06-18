@@ -2,7 +2,7 @@
   <ion-toolbar>
     <ion-back-button slot="start" class="back_button" color="primary">  </ion-back-button>
     <ion-title class="ion-text-center">{{'PREFERITI_TITOLO' | translate}}</ion-title>
-    <ion-icon class="logout" name="log-out" slot="end" (click)="logout()"></ion-icon>
+    <ion-button slot="end" (click)="logout()">{{'LOGOUT_MENU' | translate}}</ion-button>
   </ion-toolbar>
 </ion-header>
 
@@ -10,11 +10,11 @@
   <ion-list *ngFor="let preferiti of preferiti$ | async">
     <ion-item-sliding>
       <ion-item color="tertiary" [routerLink]="['/parcheggio', preferiti.parcheggio.id]">
-        <ion-img class="image" style="float: left;" src="data:image/jpeg;base64,{{preferiti.parcheggio.immagineParcheggio}}" ></ion-img>
+      <ion-icon class="icon" style="float: left" name="image"></ion-icon>
         <ion-label>
           {{preferiti.parcheggio.nome}}
-        </ion-label>
-        <ionic4-star-rating
+        </ion-label><br>
+        <ionic4-star-rating style="float: right"
                             activeIcon = "star"
                             defaultIcon = "star-outline"
                             activeColor = "#ffce00"

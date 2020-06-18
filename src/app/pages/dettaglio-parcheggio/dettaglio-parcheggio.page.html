@@ -2,7 +2,7 @@
   <ion-toolbar>
     <ion-back-button slot="start" class="back_button" color="primary">  </ion-back-button>
     <ion-title class="ion-text-center">{{'DETTAGLIO_PARCHEGGIO_TITOLO' | translate}}</ion-title>
-    <ion-icon class="logout" name="log-out" slot="end" (click)="logout()"></ion-icon>
+    <ion-button slot="end" (click)="logout()">{{'LOGOUT_MENU' | translate}}</ion-button>
   </ion-toolbar>
 </ion-header>
 
@@ -20,55 +20,55 @@
         <ion-icon *ngIf="(! parcheggio.piaciuto)" class="preferiti" name="heart-empty" (click)="createPreferito()"></ion-icon>
         <ion-icon *ngIf="parcheggio.piaciuto" class="preferiti" name="heart" (click)="createPreferito()" ></ion-icon>
       </h1>
-      <ionic4-star-rating *ngIf="(recensioni$| async) as recensioni"
+      <ionic4-star-rating
               activeIcon = "star"
               defaultIcon = "star-outline"
               activeColor = "#ffce00"
               defaultColor = "#f4f4f4"
               readonly="true"
               fontSize="30px"
-              rating="{{averageRating(recensioni)}}">
+              rating="{{parcheggio.rating}}">
       </ionic4-star-rating>
     </ion-text>
-    <ion-img style="float: right" class="image" src="data:image/jpeg;base64,{{parcheggio.immagineParcheggio}}" ></ion-img>
+    <ion-icon class="back_button" slot="end" name="image"></ion-icon>
   </ion-item-divider>
 
     <ion-item-divider color="medium">
-      <h4>{{"DESCRIZIONE" | translate}}</h4>
+      <h4>Descrizione</h4>
     </ion-item-divider>
       <ion-item><i>{{parcheggio.descrizione}} <br>
-        {{"INDIRIZZO" | translate}}:{{parcheggio.indirizzo}} <br>
-        {{"TELEFONO" | translate}}:{{parcheggio.telefono}}</i></ion-item>
+        Indirizzo:{{parcheggio.indirizzo}} <br>
+        Telefono:{{parcheggio.telefono}}</i></ion-item>
 
 
 
   <ion-item-divider color="medium">
-    <h4>{{"PREZZI" | translate}}</h4>
+    <h4>Prezzi</h4>
   </ion-item-divider>
-  <ion-item>{{"1ORA" | translate}}: {{parcheggio.costo1ora}}</ion-item>
-  <ion-item> {{"24ORE" | translate}}: {{parcheggio.costo24ore}}</ion-item>
-  <ion-item>{{"MENSILE" | translate}}: {{parcheggio.costoMensile}}</ion-item>
+  <ion-item>1 ora: {{parcheggio.costo1ora}}</ion-item>
+  <ion-item> 24 ore: {{parcheggio.costo24ore}}</ion-item>
+  <ion-item>Mensile: {{parcheggio.costoMensile}}</ion-item>
 
   <ion-item-divider color="medium">
-    <h4>{{"ORARI" | translate}}</h4>
+    <h4>Orari d'apertura</h4>
   </ion-item-divider>
   <ion-item>{{parcheggio.orario}}</ion-item>
 
     <ion-item-divider color="medium">
-    <h4>{{"RECENSIONI" | translate}}</h4>
+    <h4>Recensioni</h4>
   </ion-item-divider>
 
   <ion-list >
-      <ion-item *ngFor="let recensione of recensioni$ | async | slice:0:2 " >
+      <ion-item *ngFor="let recensione of recensioni$ | async">
         <ion-label>
           <div style="float: left">
-            <ion-avatar class="avatar">
-              <ion-img src="data:image/jpeg;base64,{{recensione.utente.immagineProfilo}}" ></ion-img>
-            </ion-avatar>
+          <ion-avatar slot="start" class="avatar">
+            <img src="/assets/avatar.png">
+          </ion-avatar>
             <p>{{recensione.utente.nome }} {{recensione.utente.cognome }}</p>
           </div>
           <div style="float: right">
-          <h2 class="ion-text-wrap">{{recensione.nome | slice: 0:20}}</h2>
+          <h2 class="ion-text-wrap">{{recensione.nome}}</h2>
             <ionic4-star-rating class="ion-text-center"
                     activeIcon = "star"
                     defaultIcon = "star-outline"
@@ -82,7 +82,7 @@
         </ion-label>
       </ion-item>
     <nav class="ion-text-center">
-    <a [routerLink]="['/recensioni', parcheggio.id]">{{"VISUALIZZA_RECENSIONI" | translate}}</a>
+    <a [routerLink]="['/recensioni', parcheggio.id]">Visualizza tutte le recensioni </a>
     </nav>
   </ion-list>
   <ion-fab vertical="bottom" horizontal="end" slot="fixed">

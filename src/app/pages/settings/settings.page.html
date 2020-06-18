@@ -2,7 +2,7 @@
   <ion-toolbar >
     <ion-back-button slot="start" class="back_button" color="primary">  </ion-back-button>
     <ion-title class="ion-text-center">{{"SETTINGS" | translate}}</ion-title>
-    <ion-icon class="logout" name="log-out" slot="end" (click)="logout()"></ion-icon>
+    <ion-button slot="end" (click)="logout()">{{'LOGOUT_MENU' | translate}}</ion-button>
   </ion-toolbar>
 </ion-header>
 
@@ -26,13 +26,13 @@
 
 <ion-card>
     <ion-text color="primary">
-      <h3 class="ion-text-center">{{"SEGNALA_PARCHEGGIO" | translate}}</h3>
+      <h3 class="ion-text-center">Segnala parcheggio</h3>
     </ion-text>
   <ion-item>
-    <ion-input [(ngModel)]="body" type="text" placeholder="{{'DESCRIZIONE_PARCHEGGIO' | translate}}" ></ion-input>
+    <ion-input [(ngModel)]="body" type="text" placeholder="Scrivi la descrizione del parcheggio" ></ion-input>
   </ion-item>
   <div align="center">
-  <ion-button (click)="send()" shape="round">{{"INVIA" | translate}}</ion-button>
+  <ion-button (click)="send()" shape="round">Invia</ion-button>
   </div>
 </ion-card>
 </ion-content>
