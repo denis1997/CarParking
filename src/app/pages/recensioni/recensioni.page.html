@@ -2,7 +2,7 @@
   <ion-toolbar>
     <ion-back-button slot="start" class="back_button" color="primary">  </ion-back-button>
     <ion-title text-center>{{'RECENSIONI_TITOLO' | translate}}</ion-title>
-    <ion-button slot="end" (click)="logout()">{{'LOGOUT_MENU' | translate}}</ion-button>
+    <ion-icon class="logout" name="log-out" slot="end" (click)="logout()"></ion-icon>
 
   </ion-toolbar>
 </ion-header>
@@ -20,8 +20,13 @@
               fontSize="20px"
               rating="{{recensione.rating}}">
       </ionic4-star-rating>
-      <i>{{recensione.descrizione}}</i><br><br>
+      <i>{{recensione.descrizione}}</i><br>
+      <ion-item >
       <b>{{recensione.utente.nome}} {{recensione.utente.cognome}}</b>
+        <ion-avatar class="avatar">
+          <ion-img src="data:image/jpeg;base64,{{recensione.utente.immagineProfilo}}" ></ion-img>
+        </ion-avatar>
+      </ion-item>
     </ion-card>
   </ion-list>
 </ion-content>

@@ -2,21 +2,22 @@
   <ion-toolbar>
     <ion-back-button slot="start" class="back_button" name="arrow-dropleft" color="primary"></ion-back-button>
     <ion-title class="ion-text-center">{{'DETTAGLIO_PARCHEGGIO_TITOLO' | translate}}</ion-title>
-    <ion-button slot="end" (click)="logout()">{{'LOGOUT_MENU' | translate}}</ion-button>
+    <ion-icon class="logout" name="log-out" slot="end" (click)="logout()"></ion-icon>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-searchbar placeholder="Cerca città o parcheggio"  [(ngModel)]="ricerca" (ionChange)="resetCitta()" animated="true"> </ion-searchbar>
+  <ion-searchbar placeholder="{{'Cerca città o parcheggio' | translate}}"  [(ngModel)]="ricerca" (ionChange)="resetCitta()" animated="true"> </ion-searchbar>
   <ion-list>
     <div *ngFor="let parcheggio of parcheggio$ | async">
         <ion-item
                 *ngIf="parcheggio.nome === cittaselezionata || (cittaselezionata === '' && parcheggio.nome.toUpperCase().includes(ricerca.toUpperCase()))
                        || parcheggio.provincia === cittaselezionata || (cittaselezionata === '' && parcheggio.provincia.toUpperCase().includes(ricerca.toUpperCase()))"
-                (click)="maps(parcheggio.latitude, parcheggio.longitude)" button="true">
+                (click)="maps(parcheggio.latitude, parcheggio.longitude) " button="true">
           <ion-grid fixed="true">
             <ion-row class="ion-align-items-center">
               <ion-col size="9">{{parcheggio.nome}}, {{parcheggio.provincia}}</ion-col>
+              <ion-col style="color: #3880ff">{{parcheggio.costo1ora}}</ion-col>
             </ion-row>
           </ion-grid>
         </ion-item>
